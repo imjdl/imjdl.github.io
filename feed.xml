@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/</id>
-  <title>Tomcat</title>
+  <id>http://localhost:4000/</id>
+  <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2024-01-11T12:08:48+08:00</updated>
+  <updated>2024-03-22T11:19:48+08:00</updated>
   <author>
     <name>Mortyjin</name>
-    <uri>/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="/"/>
+    href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <rights> © 2024 Mortyjin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>CVE-2024-21650 XWiki RCE</title>
-    <link href="/posts/CVE-2024-21650/" rel="alternate" type="text/html" title="CVE-2024-21650 XWiki RCE" />
+    <link href="http://localhost:4000/posts/CVE-2024-21650/" rel="alternate" type="text/html" title="CVE-2024-21650 XWiki RCE" />
     <published>2024-01-10T11:33:00+08:00</published>
   
     <updated>2024-01-10T11:33:00+08:00</updated>
   
-    <id>/posts/CVE-2024-21650/</id>
-    <content src="/posts/CVE-2024-21650/" />
+    <id>http://localhost:4000/posts/CVE-2024-21650/</id>
+    <content src="http://localhost:4000/posts/CVE-2024-21650/" />
     <author>
       <name>cotes</name>
     </author>
@@ -61,13 +61,13 @@ This vulnerability, identified as XWIKI-21173, is a critical remote code executi
   
   <entry>
     <title>HTB Catch Walkthrough</title>
-    <link href="/posts/htb-catch/" rel="alternate" type="text/html" title="HTB Catch Walkthrough" />
+    <link href="http://localhost:4000/posts/htb-catch/" rel="alternate" type="text/html" title="HTB Catch Walkthrough" />
     <published>2022-04-05T12:13:00+08:00</published>
   
     <updated>2022-04-05T12:13:00+08:00</updated>
   
-    <id>/posts/htb-catch/</id>
-    <content src="/posts/htb-catch/" />
+    <id>http://localhost:4000/posts/htb-catch/</id>
+    <content src="http://localhost:4000/posts/htb-catch/" />
     <author>
       <name>cotes</name>
     </author>
@@ -119,13 +119,13 @@ Summary
   
   <entry>
     <title>HTB Writer Walkthrough</title>
-    <link href="/posts/HTB-Writer/" rel="alternate" type="text/html" title="HTB Writer Walkthrough" />
+    <link href="http://localhost:4000/posts/HTB-Writer/" rel="alternate" type="text/html" title="HTB Writer Walkthrough" />
     <published>2021-08-13T12:13:00+08:00</published>
   
     <updated>2021-08-13T12:13:00+08:00</updated>
   
-    <id>/posts/HTB-Writer/</id>
-    <content src="/posts/HTB-Writer/" />
+    <id>http://localhost:4000/posts/HTB-Writer/</id>
+    <content src="http://localhost:4000/posts/HTB-Writer/" />
     <author>
       <name>cotes</name>
     </author>
@@ -176,13 +176,13 @@ Summary
   
   <entry>
     <title>Preparation before analysing Cobalt Strike.</title>
-    <link href="/posts/preparation_before_analysing_CobaltStrike/" rel="alternate" type="text/html" title="Preparation before analysing Cobalt Strike." />
+    <link href="http://localhost:4000/posts/preparation_before_analysing_CobaltStrike/" rel="alternate" type="text/html" title="Preparation before analysing Cobalt Strike." />
     <published>2021-08-12T12:13:00+08:00</published>
   
     <updated>2021-08-12T12:13:00+08:00</updated>
   
-    <id>/posts/preparation_before_analysing_CobaltStrike/</id>
-    <content src="/posts/preparation_before_analysing_CobaltStrike/" />
+    <id>http://localhost:4000/posts/preparation_before_analysing_CobaltStrike/</id>
+    <content src="http://localhost:4000/posts/preparation_before_analysing_CobaltStrike/" />
     <author>
       <name>cotes</name>
     </author>
@@ -218,13 +218,13 @@ As we all know, CobaltStrike is a commercial software and there seems to be no w
   
   <entry>
     <title>An analysis of CobaltStrike phishing site detection (chinese)</title>
-    <link href="/posts/Cobalt_Strike_phishing_site_detection/" rel="alternate" type="text/html" title="An analysis of CobaltStrike phishing site detection (chinese)" />
+    <link href="http://localhost:4000/posts/Cobalt_Strike_phishing_site_detection/" rel="alternate" type="text/html" title="An analysis of CobaltStrike phishing site detection (chinese)" />
     <published>2021-06-21T12:13:00+08:00</published>
   
     <updated>2021-06-21T12:13:00+08:00</updated>
   
-    <id>/posts/Cobalt_Strike_phishing_site_detection/</id>
-    <content src="/posts/Cobalt_Strike_phishing_site_detection/" />
+    <id>http://localhost:4000/posts/Cobalt_Strike_phishing_site_detection/</id>
+    <content src="http://localhost:4000/posts/Cobalt_Strike_phishing_site_detection/" />
     <author>
       <name>cotes</name>
     </author>

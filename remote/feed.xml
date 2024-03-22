@@ -1,0 +1,274 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Tomcat</title>
+  <subtitle>Perpetual student, continual incremental improvement.</subtitle>
+  <updated>2024-01-11T12:08:48+08:00</updated>
+  <author>
+    <name>Mortyjin</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2024 Mortyjin </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>CVE-2024-21650 XWiki RCE</title>
+    <link href="/posts/CVE-2024-21650/" rel="alternate" type="text/html" title="CVE-2024-21650 XWiki RCE" />
+    <published>2024-01-10T11:33:00+08:00</published>
+  
+    <updated>2024-01-10T11:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2024-21650/</id>
+    <content src="/posts/CVE-2024-21650/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="XWiki" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Overview
+
+XWiki is a Java-based, highly customizable and extensible enterprise-level Wiki platform, offering cross-database support, a powerful plugin system, a flexible template engine, and comprehensive security management, suitable for knowledge management and collaboration across various business needs.
+
+This vulnerability, identified as XWIKI-21173, is a critical remote code execution (RCE...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>HTB Catch Walkthrough</title>
+    <link href="/posts/htb-catch/" rel="alternate" type="text/html" title="HTB Catch Walkthrough" />
+    <published>2022-04-05T12:13:00+08:00</published>
+  
+    <updated>2022-04-05T12:13:00+08:00</updated>
+  
+    <id>/posts/htb-catch/</id>
+    <content src="/posts/htb-catch/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="CTF" />
+    
+    <category term="HTB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+Information
+
+
+  name: Catch
+  OS: Linux
+  Difficulty: Medium
+  Points: 30
+  Release: 13 Mar 2022
+  IP: 10.10.11.150
+
+
+https://app.hackthebox.com/machines/450
+
+Summary
+
+
+  Enumerate and discover services.
+  Download the APK file and analyze it.
+  Get key token through APK and get user credentials.
+  Get the Shell by user credentials.
+  Further information gathering to discover another user cre...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>HTB Writer Walkthrough</title>
+    <link href="/posts/HTB-Writer/" rel="alternate" type="text/html" title="HTB Writer Walkthrough" />
+    <published>2021-08-13T12:13:00+08:00</published>
+  
+    <updated>2021-08-13T12:13:00+08:00</updated>
+  
+    <id>/posts/HTB-Writer/</id>
+    <content src="/posts/HTB-Writer/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="CTF" />
+    
+    <category term="HTB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+Information
+
+
+  name: Writer
+  OS: Linux
+  Difficulty: Medium
+  Points: 30
+  Release: 2ND AUGUST, 2021
+  IP: 10.10.11.101
+
+
+https://app.hackthebox.eu/machines/Writer
+
+Summary
+
+
+  Enumerate to find the admin page.
+  Reading files and logging into the system via SQL injection.
+  Read source code to find command injection vulnerability and get web shell.
+  Read web path to discover configuration...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Preparation before analysing Cobalt Strike.</title>
+    <link href="/posts/preparation_before_analysing_CobaltStrike/" rel="alternate" type="text/html" title="Preparation before analysing Cobalt Strike." />
+    <published>2021-08-12T12:13:00+08:00</published>
+  
+    <updated>2021-08-12T12:13:00+08:00</updated>
+  
+    <id>/posts/preparation_before_analysing_CobaltStrike/</id>
+    <content src="/posts/preparation_before_analysing_CobaltStrike/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="Hunter" />
+    
+    <category term="CobaltStrike" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Preface
+
+Cobalt Strike is a modular attack framework that is popular with red team and penetration testers due to its ease of use and scalability.And today we will discuss the preparations before analyzing Cobalt Strike. There are two main points: decompiling and packet capture
+
+Decompiling
+
+As we all know, CobaltStrike is a commercial software and there seems to be no way to get an officially ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>An analysis of CobaltStrike phishing site detection (chinese)</title>
+    <link href="/posts/Cobalt_Strike_phishing_site_detection/" rel="alternate" type="text/html" title="An analysis of CobaltStrike phishing site detection (chinese)" />
+    <published>2021-06-21T12:13:00+08:00</published>
+  
+    <updated>2021-06-21T12:13:00+08:00</updated>
+  
+    <id>/posts/Cobalt_Strike_phishing_site_detection/</id>
+    <content src="/posts/Cobalt_Strike_phishing_site_detection/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="Hunter" />
+    
+    <category term="CobaltStrike" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Attention
+
+This article was written while I was in the 360 Quake Team. Copyright © qihoo 360.
+
+浅析 CobaltStrike Beacon Staging Server 扫描
+
+0x01 前言
+
+对网络空间测绘数据的分析和发掘，是Quake团队一直以来的核心目标。
+
+近期，我们留意到有国外安全研究人员在github上发布了一个Cobalt Strike Beacon的扫描工具，可以提取Beacon的配置信息。于是经过Quake团队小伙伴一致努力下，将此功能集成入Quake系统，经过一小段时间的扫描颇见成效。
+
+
+
+下面我们将详细介绍Beacon Staging Server扫描的原理。
+
+0x02 Beacon是什么
+
+从事渗透测试、红队攻防的小伙伴一定对这个概念并不陌生，我们这里直接使用...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
