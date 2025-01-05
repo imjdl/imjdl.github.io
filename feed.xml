@@ -1,0 +1,177 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>imjdl blog</title>
+  <subtitle>Perpetual student, continual incremental improvement.</subtitle>
+  <updated>2025-01-05T22:30:24+08:00</updated>
+  <author>
+    <name>Mortyjin</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2025 Mortyjin </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Vulnerability Review:Ivanti CSA Exploits Authentication Bypass (CVE-2024-8963) and Command Injection (CVE-2024-8190)</title>
+    <link href="/posts/ivanti-csa/" rel="alternate" type="text/html" title="Vulnerability Review:Ivanti CSA Exploits Authentication Bypass (CVE-2024-8963) and Command Injection (CVE-2024-8190)" />
+    <published>2024-11-06T12:13:00+08:00</published>
+  
+    <updated>2024-11-06T12:13:00+08:00</updated>
+  
+    <id>/posts/ivanti-csa/</id>
+    <content type="text/html" src="/posts/ivanti-csa/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="IVanti" />
+    
+  
+
+  <summary>Overview
+
+Ivanti CSA is a unified endpoint management platform that provides a comprehensive suite of tools for managing and securing
+devices, applications, and data across an organization’s network. It offers features such as asset management, software
+deployment, remote control, and security policies to ensure compliance and protect against cyber threats.
+
+In the most recent security research...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>ShowDoc Sql Injection and Remote Code Execution</title>
+    <link href="/posts/showdoc-sql-injection-and-rce/" rel="alternate" type="text/html" title="ShowDoc Sql Injection and Remote Code Execution" />
+    <published>2024-06-02T12:13:00+08:00</published>
+  
+    <updated>2024-06-02T12:13:00+08:00</updated>
+  
+    <id>/posts/showdoc-sql-injection-and-rce/</id>
+    <content type="text/html" src="/posts/showdoc-sql-injection-and-rce/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="ShowDoc" />
+    
+  
+
+  <summary>Overview
+
+ShowDoc is a versatile online documentation tool tailored for IT teams, perfect for creating beautiful API documents,
+tech manuals, and more using markdown. Its features include automated document generation from code comments or via the
+RunApi client, multi-platform support, and robust team collaboration tools. Widely adopted by over 100,000 internet
+teams, including major corporatio...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Zentao Authentication Bypass</title>
+    <link href="/posts/zentao-auth-bypass/" rel="alternate" type="text/html" title="Zentao Authentication Bypass" />
+    <published>2024-04-26T12:13:00+08:00</published>
+  
+    <updated>2024-04-26T12:13:00+08:00</updated>
+  
+    <id>/posts/zentao-auth-bypass/</id>
+    <content type="text/html" src="/posts/zentao-auth-bypass/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="Zentao" />
+    
+  
+
+  <summary>Overview
+ZenTao is a widely used open-source project management software that offers functionalities like project management,
+product management, test management, document management, bug management, task management, and team collaboration.
+Before version 18.12 of ZenTao, there was an authentication bypass vulnerability, which could be exploited by attackers
+to bypass authentication and access ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>IP-guard Authentication Bypass</title>
+    <link href="/posts/ip-guard-auth-bypass/" rel="alternate" type="text/html" title="IP-guard Authentication Bypass" />
+    <published>2024-04-17T12:13:00+08:00</published>
+  
+    <updated>2024-04-17T12:13:00+08:00</updated>
+  
+    <id>/posts/ip-guard-auth-bypass/</id>
+    <content type="text/html" src="/posts/ip-guard-auth-bypass/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="IP-guard" />
+    
+  
+
+  <summary>Overview
+
+IP-guard is an enterprise information supervision system developed by a Chinese company. It is a simple, easy-to-use,
+and fully functional computer monitoring and control tool that prevents internal documents from being copied by
+restricting the use of mobile storage devices and applications. This facilitates enterprise control over the flow of
+information, effectively safeguards corp...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>CVE-2024-21650 XWiki RCE</title>
+    <link href="/posts/CVE-2024-21650/" rel="alternate" type="text/html" title="CVE-2024-21650 XWiki RCE" />
+    <published>2024-01-10T11:33:00+08:00</published>
+  
+    <updated>2024-01-10T11:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2024-21650/</id>
+    <content type="text/html" src="/posts/CVE-2024-21650/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="XWiki" />
+    
+  
+
+  <summary>Overview
+
+XWiki is a Java-based, highly customizable and extensible enterprise-level Wiki platform, offering cross-database support, a powerful plugin system, a flexible template engine, and comprehensive security management, suitable for knowledge management and collaboration across various business needs.
+
+This vulnerability, identified as XWIKI-21173, is a critical remote code execution (RCE...</summary>
+
+  </entry>
+
+</feed>
+
+
