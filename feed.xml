@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-01-05T22:30:24+08:00</updated>
+  <updated>2025-01-06T10:09:45+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -29,7 +29,7 @@
     <id>/posts/ivanti-csa/</id>
     <content type="text/html" src="/posts/ivanti-csa/" />
     <author>
-      <name>cotes</name>
+      <name>imjdl</name>
     </author>
 
   
@@ -61,7 +61,7 @@ In the most recent security research...</summary>
     <id>/posts/showdoc-sql-injection-and-rce/</id>
     <content type="text/html" src="/posts/showdoc-sql-injection-and-rce/" />
     <author>
-      <name>cotes</name>
+      <name>imjdl</name>
     </author>
 
   
@@ -92,7 +92,7 @@ teams, including major corporatio...</summary>
     <id>/posts/zentao-auth-bypass/</id>
     <content type="text/html" src="/posts/zentao-auth-bypass/" />
     <author>
-      <name>cotes</name>
+      <name>imjdl</name>
     </author>
 
   
@@ -122,7 +122,7 @@ to bypass authentication and access ...</summary>
     <id>/posts/ip-guard-auth-bypass/</id>
     <content type="text/html" src="/posts/ip-guard-auth-bypass/" />
     <author>
-      <name>cotes</name>
+      <name>imjdl</name>
     </author>
 
   
@@ -153,7 +153,7 @@ information, effectively safeguards corp...</summary>
     <id>/posts/CVE-2024-21650/</id>
     <content type="text/html" src="/posts/CVE-2024-21650/" />
     <author>
-      <name>cotes</name>
+      <name>imjdl</name>
     </author>
 
   
