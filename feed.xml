@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-01-07T09:40:38+08:00</updated>
+  <updated>2025-01-17T23:54:42+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,34 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Vulnerability Review:CVE-2024-57727 Simple Help Unauthenticated Path Traversal Vulnerability</title>
+    <link href="/posts/simple-help/" rel="alternate" type="text/html" title="Vulnerability Review:CVE-2024-57727 Simple Help Unauthenticated Path Traversal Vulnerability" />
+    <published>2025-01-17T12:13:00+08:00</published>
+  
+    <updated>2025-01-17T12:13:00+08:00</updated>
+  
+    <id>/posts/simple-help/</id>
+    <content type="text/html" src="/posts/simple-help/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="SimpleHelp" />
+    
+  
+
+  <summary>Overview
+
+SimpleHelp is a remote support software that allows technical support personnel to remotely view and control the customer’s computer to provide instant assistance. It supports multiple operating systems and features unattended access, monitoring alerts, and management of remote computers. It also emphasizes data security with support for encryption and two-factor authentication, makin...</summary>
+
+  </entry>
 
   
   <entry>
@@ -139,36 +167,6 @@ IP-guard is an enterprise information supervision system developed by a Chinese 
 and fully functional computer monitoring and control tool that prevents internal documents from being copied by
 restricting the use of mobile storage devices and applications. This facilitates enterprise control over the flow of
 information, effectively safeguards corp...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2024-21650 XWiki RCE</title>
-    <link href="/posts/CVE-2024-21650/" rel="alternate" type="text/html" title="CVE-2024-21650 XWiki RCE" />
-    <published>2024-01-10T11:33:00+08:00</published>
-  
-    <updated>2024-01-10T11:33:00+08:00</updated>
-  
-    <id>/posts/CVE-2024-21650/</id>
-    <content type="text/html" src="/posts/CVE-2024-21650/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="XWiki" />
-    
-  
-
-  <summary>Overview
-
-XWiki is a Java-based, highly customizable and extensible enterprise-level Wiki platform, offering cross-database support, a powerful plugin system, a flexible template engine, and comprehensive security management, suitable for knowledge management and collaboration across various business needs.
-
-This vulnerability, identified as XWIKI-21173, is a critical remote code execution (RCE...</summary>
 
   </entry>
 
