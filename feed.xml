@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-01-17T23:54:42+08:00</updated>
+  <updated>2025-04-03T19:02:36+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,35 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Security Challenges in the Popularization of MCP Services</title>
+    <link href="/posts/mcp/" rel="alternate" type="text/html" title="Security Challenges in the Popularization of MCP Services" />
+    <published>2025-04-03T12:13:00+08:00</published>
+  
+    <updated>2025-04-03T12:13:00+08:00</updated>
+  
+    <id>/posts/mcp/</id>
+    <content type="text/html" src="/posts/mcp/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+    <category term="MCP" />
+    
+  
+
+  <summary>Click here to read the Chinese version. https://mp.weixin.qq.com/s/M2M8XsEFmT7rrs1M5gJ9hw
+1. Introduction.
+
+MCP (Model Context Protocol) is an open protocol launched and open-sourced by Anthropic in November 2024, aiming to realize a seamless conversation between AI and external tools. With the popularity of MCP, its applications have been expanding from browser operations to database querying,...</summary>
+
+  </entry>
 
   
   <entry>
@@ -136,37 +165,6 @@ ZenTao is a widely used open-source project management software that offers func
 product management, test management, document management, bug management, task management, and team collaboration.
 Before version 18.12 of ZenTao, there was an authentication bypass vulnerability, which could be exploited by attackers
 to bypass authentication and access ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>IP-guard Authentication Bypass</title>
-    <link href="/posts/ip-guard-auth-bypass/" rel="alternate" type="text/html" title="IP-guard Authentication Bypass" />
-    <published>2024-04-17T12:13:00+08:00</published>
-  
-    <updated>2024-04-17T12:13:00+08:00</updated>
-  
-    <id>/posts/ip-guard-auth-bypass/</id>
-    <content type="text/html" src="/posts/ip-guard-auth-bypass/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="IP-guard" />
-    
-  
-
-  <summary>Overview
-
-IP-guard is an enterprise information supervision system developed by a Chinese company. It is a simple, easy-to-use,
-and fully functional computer monitoring and control tool that prevents internal documents from being copied by
-restricting the use of mobile storage devices and applications. This facilitates enterprise control over the flow of
-information, effectively safeguards corp...</summary>
 
   </entry>
 
