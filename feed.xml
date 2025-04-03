@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-04-03T19:02:36+08:00</updated>
+  <updated>2025-04-03T19:10:00+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -40,10 +40,10 @@
     
   
 
-  <summary>Click here to read the Chinese version. https://mp.weixin.qq.com/s/M2M8XsEFmT7rrs1M5gJ9hw
+  <summary>This article was first published on our team’s. Click here to read the Chinese version. https://mp.weixin.qq.com/s/M2M8XsEFmT7rrs1M5gJ9hw
 1. Introduction.
 
-MCP (Model Context Protocol) is an open protocol launched and open-sourced by Anthropic in November 2024, aiming to realize a seamless conversation between AI and external tools. With the popularity of MCP, its applications have been expanding from browser operations to database querying,...</summary>
+MCP (Model Context Protocol) is an open protocol launched and open-sourced by Anthropic in November 2024, aiming to realize a seamless conversation between AI and external tools. With the popularity of MCP, its applications have been expandi...</summary>
 
   </entry>
 
