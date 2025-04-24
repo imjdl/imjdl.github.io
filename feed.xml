@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-04-03T19:10:00+08:00</updated>
+  <updated>2025-04-24T18:10:16+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,64 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>From CVE-2024-0012 to CVE-2024-9474  Analysis and Reflections on Palo Alto</title>
+    <link href="/posts/pa/" rel="alternate" type="text/html" title="From CVE-2024-0012 to CVE-2024-9474  Analysis and Reflections on Palo Alto" />
+    <published>2025-04-24T11:33:00+08:00</published>
+  
+    <updated>2025-04-24T11:33:00+08:00</updated>
+  
+    <id>/posts/pa/</id>
+    <content type="text/html" src="/posts/pa/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+    <category term="Palo-Alto-Networks-PAN-OS" />
+    
+  
+
+  <summary>This article was first published on our team’s. Click here to read the Chinese version. https://mp.weixin.qq.com/s/6kuuU0WcrWqI-hw2PSoYmA
+
+Introduction
+
+This paper is a vulnerability analysis review. 2024 saw two serious security vulnerabilities in Palo Alto Networks’ firewall and SSL VPN products: CVE-2024-0012 and CVE-2024-9474. these two vulnerabilities (the authentication bypass vulnerabili...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Practicing Version Recognition Technology in Critical Devices</title>
+    <link href="/posts/version/" rel="alternate" type="text/html" title="Practicing Version Recognition Technology in Critical Devices" />
+    <published>2025-04-20T12:13:00+08:00</published>
+  
+    <updated>2025-04-20T12:13:00+08:00</updated>
+  
+    <id>/posts/version/</id>
+    <content type="text/html" src="/posts/version/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="Fortigate" />
+    
+  
+
+  <summary>This article was first published on our team’s. Click here to read the Chinese version. https://mp.weixin.qq.com/s/k74R7FcWcjIBqLJa0eTwRg
+
+Introduction
+
+Those who pay attention to security consulting may have noticed that when a certain device has a vulnerability, we often see reports such as “a certain device has been hacked” or “a certain vulnerability affects a large number of devices” and s...</summary>
+
+  </entry>
 
   
   <entry>
@@ -104,67 +162,6 @@ devices, applications, and data across an organization’s network. It offers fe
 deployment, remote control, and security policies to ensure compliance and protect against cyber threats.
 
 In the most recent security research...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>ShowDoc Sql Injection and Remote Code Execution</title>
-    <link href="/posts/showdoc-sql-injection-and-rce/" rel="alternate" type="text/html" title="ShowDoc Sql Injection and Remote Code Execution" />
-    <published>2024-06-02T12:13:00+08:00</published>
-  
-    <updated>2024-06-02T12:13:00+08:00</updated>
-  
-    <id>/posts/showdoc-sql-injection-and-rce/</id>
-    <content type="text/html" src="/posts/showdoc-sql-injection-and-rce/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="ShowDoc" />
-    
-  
-
-  <summary>Overview
-
-ShowDoc is a versatile online documentation tool tailored for IT teams, perfect for creating beautiful API documents,
-tech manuals, and more using markdown. Its features include automated document generation from code comments or via the
-RunApi client, multi-platform support, and robust team collaboration tools. Widely adopted by over 100,000 internet
-teams, including major corporatio...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Zentao Authentication Bypass</title>
-    <link href="/posts/zentao-auth-bypass/" rel="alternate" type="text/html" title="Zentao Authentication Bypass" />
-    <published>2024-04-26T12:13:00+08:00</published>
-  
-    <updated>2024-04-26T12:13:00+08:00</updated>
-  
-    <id>/posts/zentao-auth-bypass/</id>
-    <content type="text/html" src="/posts/zentao-auth-bypass/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="Zentao" />
-    
-  
-
-  <summary>Overview
-ZenTao is a widely used open-source project management software that offers functionalities like project management,
-product management, test management, document management, bug management, task management, and team collaboration.
-Before version 18.12 of ZenTao, there was an authentication bypass vulnerability, which could be exploited by attackers
-to bypass authentication and access ...</summary>
 
   </entry>
 
