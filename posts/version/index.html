@@ -1860,8 +1860,8 @@
 
 <p>In order to verify the correlation between <code class="language-plaintext highlighter-rouge">Last-Modified</code> headers and firmware versions, we tested the <code class="language-plaintext highlighter-rouge">Last-Modified</code> headers on the <code class="language-plaintext highlighter-rouge">/cgi-bin/blockpage.cgi</code> files of multiple devices and checked them against known firmware versions. The test results confirm that the headers partially reflect the device’s firmware version. Based on this finding, we created a version mapping table that corresponds <code class="language-plaintext highlighter-rouge">Last-Modified</code> dates to specific firmware versions, as shown below:</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-http highlighter-rouge"><div class="code-header">
+        <span data-label-text="Http"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1870,13 +1870,13 @@
 6
 7
 8
-</pre></td><td class="rouge-code"><pre><span class="err">CISCO_RV</span><span class="mi">34</span><span class="err">X_VERSION_MAP</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="nl">"2022-10-17"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.03.29"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"2022-06-14"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.03.28"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"2022-03-08"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.03.27"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"2022-01-06"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.03.26"</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">省略</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+</pre></td><td class="rouge-code"><pre><span class="err">CISCO_RV34X_VERSION_MAP = {
+  "2022-10-17": "1.0.03.29",
+  "2022-06-14": "1.0.03.28",
+  "2022-03-08": "1.0.03.27",
+  "2022-01-06": "1.0.03.26",
+  // 省略
+  }
  
 </span></pre></td></tr></tbody></table></code></div></div>
 
