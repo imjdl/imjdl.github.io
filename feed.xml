@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-05-23T09:07:56+08:00</updated>
+  <updated>2025-12-05T16:49:11+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,69 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CVE-2025-55182 React Server Components 反序列化漏洞原理深度分析</title>
+    <link href="/posts/CVE-2025-55182/" rel="alternate" type="text/html" title="CVE-2025-55182 React Server Components 反序列化漏洞原理深度分析" />
+    <published>2025-12-04T11:33:00+08:00</published>
+  
+    <updated>2025-12-04T11:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2025-55182/</id>
+    <content type="text/html" src="/posts/CVE-2025-55182/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>一、漏洞概述
+
+
+  
+    
+      项目
+      内容
+    
+  
+  
+    
+      CVE编号
+      CVE-2025-55182
+    
+    
+      漏洞类型
+      远程代码执行 (RCE)
+    
+    
+      漏洞组件
+      React Flight Protocol (react-server-dom-webpack)
+    
+    
+      受影响版本
+      react-server-dom-webpack 19.0.0 - 19.2.0, Next.js 15.x/16.x
+    
+    
+      CVSS评分
+      9.8 (Critical)
+    
+    
+      认证要求
+      无需认证 (Pre-auth)
+    
+  
+
+
+
+
+二、React Se...</summary>
+
+  </entry>
 
   
   <entry>
@@ -130,38 +193,6 @@ MCP (Model Context Protocol) is an open protocol launched and open-sourced by An
   <summary>Overview
 
 SimpleHelp is a remote support software that allows technical support personnel to remotely view and control the customer’s computer to provide instant assistance. It supports multiple operating systems and features unattended access, monitoring alerts, and management of remote computers. It also emphasizes data security with support for encryption and two-factor authentication, makin...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Vulnerability Review:Ivanti CSA Exploits Authentication Bypass (CVE-2024-8963) and Command Injection (CVE-2024-8190)</title>
-    <link href="/posts/ivanti-csa/" rel="alternate" type="text/html" title="Vulnerability Review:Ivanti CSA Exploits Authentication Bypass (CVE-2024-8963) and Command Injection (CVE-2024-8190)" />
-    <published>2024-11-06T12:13:00+08:00</published>
-  
-    <updated>2024-11-06T12:13:00+08:00</updated>
-  
-    <id>/posts/ivanti-csa/</id>
-    <content type="text/html" src="/posts/ivanti-csa/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="IVanti" />
-    
-  
-
-  <summary>Overview
-
-Ivanti CSA is a unified endpoint management platform that provides a comprehensive suite of tools for managing and securing
-devices, applications, and data across an organization’s network. It offers features such as asset management, software
-deployment, remote control, and security policies to ensure compliance and protect against cyber threats.
-
-In the most recent security research...</summary>
 
   </entry>
 
