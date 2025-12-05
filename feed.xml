@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-12-05T16:49:11+08:00</updated>
+  <updated>2025-12-05T16:53:20+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>CVE-2025-55182 React Server Components 反序列化漏洞原理深度分析</title>
     <link href="/posts/CVE-2025-55182/" rel="alternate" type="text/html" title="CVE-2025-55182 React Server Components 反序列化漏洞原理深度分析" />
-    <published>2025-12-04T11:33:00+08:00</published>
+    <published>2025-12-05T11:33:00+08:00</published>
   
-    <updated>2025-12-04T11:33:00+08:00</updated>
+    <updated>2025-12-05T11:33:00+08:00</updated>
   
     <id>/posts/CVE-2025-55182/</id>
     <content type="text/html" src="/posts/CVE-2025-55182/" />
