@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2025-12-05T18:40:39+08:00</updated>
+  <updated>2026-01-29T00:18:47+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -13,10 +13,88 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
-  <rights> © 2025 Mortyjin </rights>
+  <rights> © 2026 Mortyjin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CVE-2026-24423 SmarterMail ConnectToHub 未经身份验证的远程代码执行漏洞</title>
+    <link href="/posts/CVE-2026-24423-Technical-Analysis/" rel="alternate" type="text/html" title="CVE-2026-24423 SmarterMail ConnectToHub 未经身份验证的远程代码执行漏洞" />
+    <published>2026-01-28T21:33:00+08:00</published>
+  
+    <updated>2026-01-28T21:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2026-24423-Technical-Analysis/</id>
+    <content type="text/html" src="/posts/CVE-2026-24423-Technical-Analysis/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>执行摘要
+
+SmarterTools SmarterMail 在其 ConnectToHub API 功能中发现了一个严重的远程代码执行漏洞。该漏洞被分配为 CVE-2026-24423，CVSS v4 评分为 9.3（严重）。
+
+攻击者可以通过构造恶意的 HTTP 服务器，配合 SmarterMail 的 ConnectToHub 功能，在未经身份验证的情况下实现远程代码执行。该漏洞源于以下关键安全缺陷：
+
+
+  缺少身份验证：ConnectToHub API 端点允许匿名访问
+  服务器端请求伪造 (SSRF)：应用接受外部 URL 并主动请求
+  命令注入：从外部服务器获取的命令直接在系统级别执行
+
+
+关键信息
+
+
+  
+    
+      属性
+      值
+    
+  
+  
+    
+      CVE 编号
+      CVE-2026-24423
+    
+  ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>CVE-2026-24423 SmarterMail ConnectToHub Unauthenticated Remote Code Execution Vulnerability</title>
+    <link href="/posts/CVE-2026-24423-Technical-Analysis-EN/" rel="alternate" type="text/html" title="CVE-2026-24423 SmarterMail ConnectToHub Unauthenticated Remote Code Execution Vulnerability" />
+    <published>2026-01-28T21:33:00+08:00</published>
+  
+    <updated>2026-01-28T21:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2026-24423-Technical-Analysis-EN/</id>
+    <content type="text/html" src="/posts/CVE-2026-24423-Technical-Analysis-EN/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>Executive Summary
+
+A critical remote code execution vulnerability has been discovered in SmarterTools SmarterMail’s ConnectToHub API functionality. This vulnerability has been assigned CVE-2026-24423 with a CVSS v4 score of 9.3 (Critical).
+
+Attackers can achieve remote code execution without authentication by crafting a malicious HTTP server that exploits SmarterMail’s ConnectToHub functionalit...</summary>
+
+  </entry>
 
   
   <entry>
@@ -136,63 +214,6 @@ This paper is a vulnerability analysis review. 2024 saw two serious security vul
 Introduction
 
 Those who pay attention to security consulting may have noticed that when a certain device has a vulnerability, we often see reports such as “a certain device has been hacked” or “a certain vulnerability affects a large number of devices” and s...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Security Challenges in the Popularization of MCP Services</title>
-    <link href="/posts/mcp/" rel="alternate" type="text/html" title="Security Challenges in the Popularization of MCP Services" />
-    <published>2025-04-03T12:13:00+08:00</published>
-  
-    <updated>2025-04-03T12:13:00+08:00</updated>
-  
-    <id>/posts/mcp/</id>
-    <content type="text/html" src="/posts/mcp/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="AI" />
-    
-    <category term="MCP" />
-    
-  
-
-  <summary>This article was first published on our team’s. Click here to read the Chinese version. https://mp.weixin.qq.com/s/M2M8XsEFmT7rrs1M5gJ9hw
-1. Introduction.
-
-MCP (Model Context Protocol) is an open protocol launched and open-sourced by Anthropic in November 2024, aiming to realize a seamless conversation between AI and external tools. With the popularity of MCP, its applications have been expandi...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Vulnerability Review:CVE-2024-57727 Simple Help Unauthenticated Path Traversal Vulnerability</title>
-    <link href="/posts/simple-help/" rel="alternate" type="text/html" title="Vulnerability Review:CVE-2024-57727 Simple Help Unauthenticated Path Traversal Vulnerability" />
-    <published>2025-01-17T12:13:00+08:00</published>
-  
-    <updated>2025-01-17T12:13:00+08:00</updated>
-  
-    <id>/posts/simple-help/</id>
-    <content type="text/html" src="/posts/simple-help/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="SimpleHelp" />
-    
-  
-
-  <summary>Overview
-
-SimpleHelp is a remote support software that allows technical support personnel to remotely view and control the customer’s computer to provide instant assistance. It supports multiple operating systems and features unattended access, monitoring alerts, and management of remote computers. It also emphasizes data security with support for encryption and two-factor authentication, makin...</summary>
 
   </entry>
 
