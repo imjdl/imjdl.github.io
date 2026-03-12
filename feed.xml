@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2026-01-29T00:18:47+08:00</updated>
+  <updated>2026-03-12T21:22:08+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,96 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CVE-2026-31816 Authentication Bypass Vulnerability</title>
+    <link href="/posts/CVE-2026-31816-EN/" rel="alternate" type="text/html" title="CVE-2026-31816 Authentication Bypass Vulnerability" />
+    <published>2026-03-12T12:33:00+08:00</published>
+  
+    <updated>2026-03-12T12:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2026-31816-EN/</id>
+    <content type="text/html" src="/posts/CVE-2026-31816-EN/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>Executive Summary
+
+CVE-2026-31816 is a critical security vulnerability discovered in the Budibase low-code platform, with a CVSS score of 9.8 (Critical). This vulnerability consists of two components:
+
+
+  Authentication Bypass: Due to a regex implementation flaw, attackers can bypass authentication via URL query string manipulation
+  Remote Code Execution (RCE): After bypassing authentication, ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>CVE-2026-31816  Budibase 认证绕过漏洞分析</title>
+    <link href="/posts/CVE-2026-31816-CN/" rel="alternate" type="text/html" title="CVE-2026-31816  Budibase 认证绕过漏洞分析" />
+    <published>2026-03-12T12:33:00+08:00</published>
+  
+    <updated>2026-03-12T12:33:00+08:00</updated>
+  
+    <id>/posts/CVE-2026-31816-CN/</id>
+    <content type="text/html" src="/posts/CVE-2026-31816-CN/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>执行摘要
+
+CVE-2026-31816 是 Budibase 低代码平台中发现的一个严重安全漏洞，CVSS 评分 9.8（严重）。该漏洞由两部分组成：
+
+
+  认证绕过：由于正则表达式实现缺陷，攻击者可通过 URL 查询字符串绕过身份验证
+  远程代码执行（RCE）：绕过认证后，攻击者可上传恶意插件实现服务器端任意代码执行
+
+
+攻击链：未授权访问 → 插件上传 → DATASOURCE 插件 → 代码执行 → 完全系统控制
+
+
+
+1. 漏洞概述
+
+1.1 基本信息
+
+
+  
+    
+      属性
+      值
+    
+  
+  
+    
+      CVE 编号
+      CVE-2026-31816
+    
+    
+      漏洞类型
+      认证绕过 + 远程代码执行
+    
+    
+      CVSS 评分
+      9.8 (严重)
+    ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -156,64 +246,6 @@ Attackers can achieve remote code execution without authentication by crafting a
 
 
 二、React Se...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>From CVE-2024-0012 to CVE-2024-9474  Analysis and Reflections on Palo Alto</title>
-    <link href="/posts/pa/" rel="alternate" type="text/html" title="From CVE-2024-0012 to CVE-2024-9474  Analysis and Reflections on Palo Alto" />
-    <published>2025-04-24T11:33:00+08:00</published>
-  
-    <updated>2025-04-24T11:33:00+08:00</updated>
-  
-    <id>/posts/pa/</id>
-    <content type="text/html" src="/posts/pa/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-    <category term="Palo-Alto-Networks-PAN-OS" />
-    
-  
-
-  <summary>This article was first published on our team’s. Click here to read the Chinese version. https://mp.weixin.qq.com/s/6kuuU0WcrWqI-hw2PSoYmA
-
-Introduction
-
-This paper is a vulnerability analysis review. 2024 saw two serious security vulnerabilities in Palo Alto Networks’ firewall and SSL VPN products: CVE-2024-0012 and CVE-2024-9474. these two vulnerabilities (the authentication bypass vulnerabili...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Practicing Version Recognition Technology in Critical Devices</title>
-    <link href="/posts/version/" rel="alternate" type="text/html" title="Practicing Version Recognition Technology in Critical Devices" />
-    <published>2025-04-20T12:13:00+08:00</published>
-  
-    <updated>2025-04-20T12:13:00+08:00</updated>
-  
-    <id>/posts/version/</id>
-    <content type="text/html" src="/posts/version/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="Fortigate" />
-    
-  
-
-  <summary>This article was first published on our team’s. Click here to read the Chinese version. https://mp.weixin.qq.com/s/k74R7FcWcjIBqLJa0eTwRg
-
-Introduction
-
-Those who pay attention to security consulting may have noticed that when a certain device has a vulnerability, we often see reports such as “a certain device has been hacked” or “a certain vulnerability affects a large number of devices” and s...</summary>
 
   </entry>
 
