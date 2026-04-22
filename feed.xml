@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2026-03-12T21:22:08+08:00</updated>
+  <updated>2026-04-22T12:29:03+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,71 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CVE-2026-39813 Deep Dive Path Traversal Authentication Bypass in FortiSandbox JRPC API</title>
+    <link href="/posts/blog_cve_2026_39813_en/" rel="alternate" type="text/html" title="CVE-2026-39813 Deep Dive Path Traversal Authentication Bypass in FortiSandbox JRPC API" />
+    <published>2026-04-21T12:34:00+08:00</published>
+  
+    <updated>2026-04-21T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_cve_2026_39813_en/</id>
+    <content type="text/html" src="/posts/blog_cve_2026_39813_en/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>Background
+
+On April 14, 2026, Fortinet published security advisory FG-IR-26-112 disclosing a critical path traversal vulnerability in FortiSandbox — CVE-2026-39813 (CVSS 9.1). The vulnerability affects FortiSandbox 4.4.0–4.4.8 and 5.0.0–5.0.5, and was patched in 4.4.9 and 5.0.6.
+
+This post presents a detailed technical analysis based on firmware reverse engineering, reconstructing the full exp...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>CVE-2026-39813 深度分析：FortiSandbox JRPC API 路径遍历认证绕过</title>
+    <link href="/posts/blog_cve_2026_39813_cn/" rel="alternate" type="text/html" title="CVE-2026-39813 深度分析：FortiSandbox JRPC API 路径遍历认证绕过" />
+    <published>2026-04-21T12:33:00+08:00</published>
+  
+    <updated>2026-04-21T12:33:00+08:00</updated>
+  
+    <id>/posts/blog_cve_2026_39813_cn/</id>
+    <content type="text/html" src="/posts/blog_cve_2026_39813_cn/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>一个精心构造的 ../../tmp/ 如何绕过认证体系，读取 FortiSandbox 全部系统信息
+
+
+背景
+
+2026 年 4 月 14 日，Fortinet 发布了 FG-IR-26-112 安全公告，披露了 FortiSandbox 产品中一个严重的路径遍历漏洞 CVE-2026-39813（CVSS 9.1）。该漏洞影响 FortiSandbox 4.4.0–4.4.8 和 5.0.0–5.0.5 版本，已在 4.4.9 和 5.0.6 中修复。
+
+本文基于固件逆向分析，从字节码层面还原漏洞的完整利用链。
+
+摘要
+
+
+  漏洞类型： JRPC API 的 is_valid_session() 函数将用户输入的 session 字段直接拼入文件路径 os.path.join(DIRRPCSESS, session_id)，未进行输入验证
+  利用条件： 构造 session:...</summary>
+
+  </entry>
 
   
   <entry>
@@ -155,97 +220,6 @@ SmarterTools SmarterMail 在其 ConnectToHub API 功能中发现了一个严重�
       CVE-2026-24423
     
   ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2026-24423 SmarterMail ConnectToHub Unauthenticated Remote Code Execution Vulnerability</title>
-    <link href="/posts/CVE-2026-24423-Technical-Analysis-EN/" rel="alternate" type="text/html" title="CVE-2026-24423 SmarterMail ConnectToHub Unauthenticated Remote Code Execution Vulnerability" />
-    <published>2026-01-28T21:33:00+08:00</published>
-  
-    <updated>2026-01-28T21:33:00+08:00</updated>
-  
-    <id>/posts/CVE-2026-24423-Technical-Analysis-EN/</id>
-    <content type="text/html" src="/posts/CVE-2026-24423-Technical-Analysis-EN/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>Executive Summary
-
-A critical remote code execution vulnerability has been discovered in SmarterTools SmarterMail’s ConnectToHub API functionality. This vulnerability has been assigned CVE-2026-24423 with a CVSS v4 score of 9.3 (Critical).
-
-Attackers can achieve remote code execution without authentication by crafting a malicious HTTP server that exploits SmarterMail’s ConnectToHub functionalit...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2025-55182 React Server Components 反序列化漏洞原理深度分析</title>
-    <link href="/posts/CVE-2025-55182/" rel="alternate" type="text/html" title="CVE-2025-55182 React Server Components 反序列化漏洞原理深度分析" />
-    <published>2025-12-05T11:33:00+08:00</published>
-  
-    <updated>2025-12-05T11:33:00+08:00</updated>
-  
-    <id>/posts/CVE-2025-55182/</id>
-    <content type="text/html" src="/posts/CVE-2025-55182/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>一、漏洞概述
-
-
-  
-    
-      项目
-      内容
-    
-  
-  
-    
-      CVE编号
-      CVE-2025-55182
-    
-    
-      漏洞类型
-      远程代码执行 (RCE)
-    
-    
-      漏洞组件
-      React Flight Protocol (react-server-dom-webpack)
-    
-    
-      受影响版本
-      react-server-dom-webpack 19.0.0 - 19.2.0, Next.js 15.x/16.x
-    
-    
-      CVSS评分
-      9.8 (Critical)
-    
-    
-      认证要求
-      无需认证 (Pre-auth)
-    
-  
-
-
-
-
-二、React Se...</summary>
 
   </entry>
 
