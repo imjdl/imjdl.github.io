@@ -788,17 +788,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -961,9 +950,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1945 words"
+  title="1747 words"
 >
-  <em>10 min</em> read</span>
+  <em>9 min</em> read</span>
 
         </div>
       </div>
@@ -1321,34 +1310,6 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>这个修复彻底解决了问题——合法 session ID 由 <code class="language-plaintext highlighter-rouge">secrets.token_hex(16)</code> 生成，固定为 32 位十六进制字符串，正则严格匹配该格式。</p>
-
-<h2 id="与-cve-2026-39808-的关联"><span class="me-2">与 CVE-2026-39808 的关联</span><a href="#与-cve-2026-39808-的关联" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>CVE-2026-39813 与同一天公告的 CVE-2026-39808（命令注入，CVSS 9.1）组合可形成完整的攻击链：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre>CVE-2026-39813（信息泄露）
-  → 获取系统版本、序列号、配置信息
-  → 确认目标是否为有价值的攻击目标
-  → 下载加密备份（配合其他漏洞解密）
-
-CVE-2026-39808（命令注入，已修复）
-  → 在 /usr/rpcsess/ 创建伪造 session 文件（内容为 "admin"）
-  → 绕过 CVE-2026-39813 中 has_admin_write_permission 的限制
-  → 修改管理员密码，完全接管设备
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>值得注意的是，CVE-2026-39813 <strong>完全不需要已知 RCE</strong>，纯 HTTP 请求即可触发信息泄露。相比之下，CVE-2026-39808 虽然更危险（root RCE），但需要能触发扫描才能利用。</p>
 
 <h2 id="时间线"><span class="me-2">时间线</span><a href="#时间线" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
