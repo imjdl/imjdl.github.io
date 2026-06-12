@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2026-04-24T08:37:53+08:00</updated>
+  <updated>2026-06-12T18:25:19+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,73 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles</title>
+    <link href="/posts/blog_backup_decryption_en/" rel="alternate" type="text/html" title="Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles" />
+    <published>2026-06-12T12:34:00+08:00</published>
+  
+    <updated>2026-06-12T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_backup_decryption_en/</id>
+    <content type="text/html" src="/posts/blog_backup_decryption_en/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>How firmware reverse engineering revealed a hardcoded AES-256-CBC passphrase shared across all FortiSandbox devices — and why the 4.4.9 patch did nothing to fix it
+
+
+Background
+
+In our previous article on CVE-2026-39813, we demonstrated how a path traversal vulnerability in FortiSandbox’s JRPC API allows unauthenticated access to the backup/config endpoint, yielding a 32KB encrypted file with t...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥</title>
+    <link href="/posts/blog_backup_decryption_cn/" rel="alternate" type="text/html" title="FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥" />
+    <published>2026-06-12T12:34:00+08:00</published>
+  
+    <updated>2026-06-12T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_backup_decryption_cn/</id>
+    <content type="text/html" src="/posts/blog_backup_decryption_cn/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>通过固件逆向提取 FortiSandbox 备份加密的硬编码密码，还原完整的备份解密攻击链
+
+
+背景
+
+在上一篇文章中，我们分析了 CVE-2026-39813（JRPC 路径遍历认证绕过），发现攻击者可以通过 backup/config 端点未授权下载 32KB 的加密系统备份。该备份以 OpenSSL Salted__ 格式存储，使用 AES-256-CBC 加密。当时我们提到如果能获取加密密钥，即可解密完整系统配置——但没有进一步深究。
+
+本文将展示如何通过固件逆向工程，从 .pyc 字节码中提取出硬编码的加密密码，并实现对备份文件的离线解密。
+
+摘要
+
+
+  发现类型： 备份加密密码硬编码在 common/utils.pyc 的字节码常量中
+  硬编码密码： BzklORFMUxD-b5PY1Dj3-nO（24 字符，所有未自定义密钥文件的设备共享）
+  影响范围： 获得加密...</summary>
+
+  </entry>
 
   
   <entry>
@@ -110,116 +177,6 @@ CVE-2026-31816 is a critical security vulnerability discovered in the Budibase l
 
   Authentication Bypass: Due to a regex implementation flaw, attackers can bypass authentication via URL query string manipulation
   Remote Code Execution (RCE): After bypassing authentication, ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2026-31816  Budibase 认证绕过漏洞分析</title>
-    <link href="/posts/CVE-2026-31816-CN/" rel="alternate" type="text/html" title="CVE-2026-31816  Budibase 认证绕过漏洞分析" />
-    <published>2026-03-12T12:33:00+08:00</published>
-  
-    <updated>2026-03-12T12:33:00+08:00</updated>
-  
-    <id>/posts/CVE-2026-31816-CN/</id>
-    <content type="text/html" src="/posts/CVE-2026-31816-CN/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>执行摘要
-
-CVE-2026-31816 是 Budibase 低代码平台中发现的一个严重安全漏洞，CVSS 评分 9.8（严重）。该漏洞由两部分组成：
-
-
-  认证绕过：由于正则表达式实现缺陷，攻击者可通过 URL 查询字符串绕过身份验证
-  远程代码执行（RCE）：绕过认证后，攻击者可上传恶意插件实现服务器端任意代码执行
-
-
-攻击链：未授权访问 → 插件上传 → DATASOURCE 插件 → 代码执行 → 完全系统控制
-
-
-
-1. 漏洞概述
-
-1.1 基本信息
-
-
-  
-    
-      属性
-      值
-    
-  
-  
-    
-      CVE 编号
-      CVE-2026-31816
-    
-    
-      漏洞类型
-      认证绕过 + 远程代码执行
-    
-    
-      CVSS 评分
-      9.8 (严重)
-    ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2026-24423 SmarterMail ConnectToHub 未经身份验证的远程代码执行漏洞</title>
-    <link href="/posts/CVE-2026-24423-Technical-Analysis/" rel="alternate" type="text/html" title="CVE-2026-24423 SmarterMail ConnectToHub 未经身份验证的远程代码执行漏洞" />
-    <published>2026-01-28T21:33:00+08:00</published>
-  
-    <updated>2026-01-28T21:33:00+08:00</updated>
-  
-    <id>/posts/CVE-2026-24423-Technical-Analysis/</id>
-    <content type="text/html" src="/posts/CVE-2026-24423-Technical-Analysis/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>执行摘要
-
-SmarterTools SmarterMail 在其 ConnectToHub API 功能中发现了一个严重的远程代码执行漏洞。该漏洞被分配为 CVE-2026-24423，CVSS v4 评分为 9.3（严重）。
-
-攻击者可以通过构造恶意的 HTTP 服务器，配合 SmarterMail 的 ConnectToHub 功能，在未经身份验证的情况下实现远程代码执行。该漏洞源于以下关键安全缺陷：
-
-
-  缺少身份验证：ConnectToHub API 端点允许匿名访问
-  服务器端请求伪造 (SSRF)：应用接受外部 URL 并主动请求
-  命令注入：从外部服务器获取的命令直接在系统级别执行
-
-
-关键信息
-
-
-  
-    
-      属性
-      值
-    
-  
-  
-    
-      CVE 编号
-      CVE-2026-24423
-    
-  ...</summary>
 
   </entry>
 

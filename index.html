@@ -828,6 +828,156 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
+      <a href="/posts/blog_backup_decryption_en/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+          
+          
+
+          
+
+          
+
+          
+
+          <div class="col-md-5">
+            <div class="preview-img  shimmer"><img src="/assets/img/20260421/logo.png" alt="Preview Image"  loading="lazy"></div>
+          </div>
+
+          
+        
+
+        <div class="col-md-7">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>How firmware reverse engineering revealed a hardcoded AES-256-CBC passphrase shared across all FortiSandbox devices — and why the 4.4.9 patch did nothing to fix it
+
+
+Background
+
+In our previous art...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1781238840"
+  data-df="ll"
+  
+>
+  Jun 12, 2026
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      vulnerability
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/blog_backup_decryption_cn/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+          
+          
+
+          
+
+          
+
+          
+
+          <div class="col-md-5">
+            <div class="preview-img  shimmer"><img src="/assets/img/20260421/logo.png" alt="Preview Image"  loading="lazy"></div>
+          </div>
+
+          
+        
+
+        <div class="col-md-7">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>通过固件逆向提取 FortiSandbox 备份加密的硬编码密码，还原完整的备份解密攻击链
+
+
+背景
+
+在上一篇文章中，我们分析了 CVE-2026-39813（JRPC 路径遍历认证绕过），发现攻击者可以通过 backup/config 端点未授权下载 32KB 的加密系统备份。该备份以 OpenSSL Salted__ 格式存储，使用 AES-256-CBC 加密。当时我们提到如果能获取...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1781238840"
+  data-df="ll"
+  
+>
+  Jun 12, 2026
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      vulnerability
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/posts/blog_cve_2026_39813_en/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -1046,159 +1196,6 @@ CVE-2026-31816 is a critical security vulnerability discovered in the Budibase l
       </a>
     </article>
   
-    <article class="card-wrapper card">
-      <a href="/posts/CVE-2026-31816-CN/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-          
-          
-
-          
-
-          
-
-          
-
-          <div class="col-md-5">
-            <div class="preview-img  shimmer"><img src="/assets/img/20260312/logo.png" alt="Preview Image"  loading="lazy"></div>
-          </div>
-
-          
-        
-
-        <div class="col-md-7">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">CVE-2026-31816  Budibase 认证绕过漏洞分析</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>执行摘要
-
-CVE-2026-31816 是 Budibase 低代码平台中发现的一个严重安全漏洞，CVSS 评分 9.8（严重）。该漏洞由两部分组成：
-
-
-  认证绕过：由于正则表达式实现缺陷，攻击者可通过 URL 查询字符串绕过身份验证
-  远程代码执行（RCE）：绕过认证后，攻击者可上传恶意插件实现服务器端任意代码执行
-
-
-攻击链：未授权访问 → 插件上传 → DATASOURCE 插...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1773289980"
-  data-df="ll"
-  
->
-  Mar 12, 2026
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      vulnerability
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/CVE-2026-24423-Technical-Analysis/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-          
-          
-
-          
-
-          
-
-          
-
-          <div class="col-md-5">
-            <div class="preview-img  shimmer"><img src="/assets/img/20260128/logo.png" alt="Preview Image"  loading="lazy"></div>
-          </div>
-
-          
-        
-
-        <div class="col-md-7">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">CVE-2026-24423 SmarterMail ConnectToHub 未经身份验证的远程代码执行漏洞</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>执行摘要
-
-SmarterTools SmarterMail 在其 ConnectToHub API 功能中发现了一个严重的远程代码执行漏洞。该漏洞被分配为 CVE-2026-24423，CVSS v4 评分为 9.3（严重）。
-
-攻击者可以通过构造恶意的 HTTP 服务器，配合 SmarterMail 的 ConnectToHub 功能，在未经身份验证的情况下实现远程代码执行。该漏洞源于以...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1769607180"
-  data-df="ll"
-  
->
-  Jan 28, 2026
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      vulnerability
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
 </div>
 <!-- #post-list -->
 
@@ -1388,6 +1385,20 @@ SmarterTools SmarterMail 在其 ConnectToHub API 功能中发现了一个严重�
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/blog_backup_decryption_cn/">FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/blog_backup_decryption_en/">Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/blog_cve_2026_39813_en/">CVE-2026-39813 Deep Dive Path Traversal Authentication Bypass in FortiSandbox JRPC API</a>
         </li>
       
@@ -1403,20 +1414,6 @@ SmarterTools SmarterMail 在其 ConnectToHub API 功能中发现了一个严重�
         
         <li class="text-truncate lh-lg">
           <a href="/posts/CVE-2026-31816-CN/">CVE-2026-31816  Budibase 认证绕过漏洞分析</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/CVE-2026-31816-EN/">CVE-2026-31816 Authentication Bypass Vulnerability</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/CVE-2026-24423-Technical-Analysis-EN/">CVE-2026-24423 SmarterMail ConnectToHub Unauthenticated Remote Code Execution Vulnerability</a>
         </li>
       
     </ul>

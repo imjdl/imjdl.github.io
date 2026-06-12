@@ -1487,6 +1487,20 @@ Path B (JSON body / fallback):
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/blog_backup_decryption_cn/">FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/blog_backup_decryption_en/">Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/blog_cve_2026_39813_en/">CVE-2026-39813 Deep Dive Path Traversal Authentication Bypass in FortiSandbox JRPC API</a>
         </li>
       
@@ -1502,20 +1516,6 @@ Path B (JSON body / fallback):
         
         <li class="text-truncate lh-lg">
           <a href="/posts/CVE-2026-31816-CN/">CVE-2026-31816  Budibase 认证绕过漏洞分析</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/CVE-2026-31816-EN/">CVE-2026-31816 Authentication Bypass Vulnerability</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/CVE-2026-24423-Technical-Analysis-EN/">CVE-2026-24423 SmarterMail ConnectToHub Unauthenticated Remote Code Execution Vulnerability</a>
         </li>
       
     </ul>
@@ -2138,6 +2138,30 @@ Path B (JSON body / fallback):
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2151,6 +2175,72 @@ Path B (JSON body / fallback):
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/blog_backup_decryption_en/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1781238840"
+  data-df="ll"
+  
+>
+  Jun 12, 2026
+</time>
+
+              <h4 class="pt-0 my-2">Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles</h4>
+              <div class="text-muted">
+                <p>How firmware reverse engineering revealed a hardcoded AES-256-CBC passphrase shared across all FortiSandbox devices — and why the 4.4.9 patch did nothing to fix it
+
+
+Background
+
+In our previous art...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/blog_backup_decryption_cn/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1781238840"
+  data-df="ll"
+  
+>
+  Jun 12, 2026
+</time>
+
+              <h4 class="pt-0 my-2">FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥</h4>
+              <div class="text-muted">
+                <p>通过固件逆向提取 FortiSandbox 备份加密的硬编码密码，还原完整的备份解密攻击链
+
+
+背景
+
+在上一篇文章中，我们分析了 CVE-2026-39813（JRPC 路径遍历认证绕过），发现攻击者可以通过 backup/config 端点未授权下载 32KB 的加密系统备份。该备份以 OpenSSL Salted__ 格式存储，使用 AES-256-CBC 加密。当时我们提到如果能获取...</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/blog_cve_2026_39813_cn/" class="post-preview card h-100">
@@ -2185,73 +2275,6 @@ Path B (JSON body / fallback):
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/CVE-2026-31816-EN/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1773289980"
-  data-df="ll"
-  
->
-  Mar 12, 2026
-</time>
-
-              <h4 class="pt-0 my-2">CVE-2026-31816 Authentication Bypass Vulnerability</h4>
-              <div class="text-muted">
-                <p>Executive Summary
-
-CVE-2026-31816 is a critical security vulnerability discovered in the Budibase low-code platform, with a CVSS score of 9.8 (Critical). This vulnerability consists of two componen...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/CVE-2026-31816-CN/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1773289980"
-  data-df="ll"
-  
->
-  Mar 12, 2026
-</time>
-
-              <h4 class="pt-0 my-2">CVE-2026-31816  Budibase 认证绕过漏洞分析</h4>
-              <div class="text-muted">
-                <p>执行摘要
-
-CVE-2026-31816 是 Budibase 低代码平台中发现的一个严重安全漏洞，CVSS 评分 9.8（严重）。该漏洞由两部分组成：
-
-
-  认证绕过：由于正则表达式实现缺陷，攻击者可通过 URL 查询字符串绕过身份验证
-  远程代码执行（RCE）：绕过认证后，攻击者可上传恶意插件实现服务器端任意代码执行
-
-
-攻击链：未授权访问 → 插件上传 → DATASOURCE 插...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -2276,9 +2299,13 @@ CVE-2026-31816 是 Budibase 低代码平台中发现的一个严重安全漏洞�
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/blog_backup_decryption_cn/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>FortiSandbox 备份配置文件解密：固件逆向发现硬编码加密密钥</p>
+    </a>
   
 </nav>
 
