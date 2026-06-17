@@ -1100,7 +1100,7 @@
 
 <h2 id="background"><span class="me-2">Background</span><a href="#background" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>In our <a href="./blog_cve_2026_39813_en.md">previous article on CVE-2026-39813</a>, we demonstrated how a path traversal vulnerability in FortiSandbox’s JRPC API allows unauthenticated access to the <code class="language-plaintext highlighter-rouge">backup/config</code> endpoint, yielding a 32KB encrypted file with the unmistakable <code class="language-plaintext highlighter-rouge">Salted__</code> header — the signature of OpenSSL’s <code class="language-plaintext highlighter-rouge">enc</code> command.</p>
+<p>In our <a href="https://rustlang.rs/posts/blog_cve_2026_39813_en/">previous article on CVE-2026-39813</a>, we demonstrated how a path traversal vulnerability in FortiSandbox’s JRPC API allows unauthenticated access to the <code class="language-plaintext highlighter-rouge">backup/config</code> endpoint, yielding a 32KB encrypted file with the unmistakable <code class="language-plaintext highlighter-rouge">Salted__</code> header — the signature of OpenSSL’s <code class="language-plaintext highlighter-rouge">enc</code> command.</p>
 
 <p>That article ended with a 26,224-byte encrypted blob and an open question: can it be decrypted?</p>
 

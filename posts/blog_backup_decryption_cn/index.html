@@ -1111,7 +1111,7 @@
 
 <h2 id="背景"><span class="me-2">背景</span><a href="#背景" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>在上一篇文章中，我们分析了 CVE-2026-39813（JRPC 路径遍历认证绕过），发现攻击者可以通过 <code class="language-plaintext highlighter-rouge">backup/config</code> 端点未授权下载 32KB 的加密系统备份。该备份以 OpenSSL <code class="language-plaintext highlighter-rouge">Salted__</code> 格式存储，使用 AES-256-CBC 加密。当时我们提到如果能获取加密密钥，即可解密完整系统配置——但没有进一步深究。</p>
+<p>在上一篇文章中，我们分析了 <a href="(https://rustlang.rs/posts/blog_cve_2026_39813_cn/)">CVE-2026-39813（JRPC 路径遍历认证绕过）</a>，发现攻击者可以通过 <code class="language-plaintext highlighter-rouge">backup/config</code> 端点未授权下载 32KB 的加密系统备份。该备份以 OpenSSL <code class="language-plaintext highlighter-rouge">Salted__</code> 格式存储，使用 AES-256-CBC 加密。当时我们提到如果能获取加密密钥，即可解密完整系统配置——但没有进一步深究。</p>
 
 <p>本文将展示如何通过固件逆向工程，从 <code class="language-plaintext highlighter-rouge">.pyc</code> 字节码中提取出硬编码的加密密码，并实现对备份文件的离线解密。</p>
 
