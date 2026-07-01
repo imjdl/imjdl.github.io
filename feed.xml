@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2026-06-17T16:23:44+08:00</updated>
+  <updated>2026-07-01T15:41:25+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,62 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CVE-2025-11837 Deep Dive Python Code Injection Vulnerability in QNAP Malware Remover</title>
+    <link href="/posts/blog_cve_2025_11837_en/" rel="alternate" type="text/html" title="CVE-2025-11837 Deep Dive Python Code Injection Vulnerability in QNAP Malware Remover" />
+    <published>2026-06-22T12:34:00+08:00</published>
+  
+    <updated>2026-06-22T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_cve_2025_11837_en/</id>
+    <content type="text/html" src="/posts/blog_cve_2025_11837_en/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>Background
+
+CVE-2025-11837 affects QNAP Malware Remover. It carries a CVSS 9.8 score and is tagged as network-reachable, no authentication required, no user interaction. The vulnerability was first demonstrated at Pwn2Own Ireland 2025 and subsequently fixed by QNAP in advisory QSA-25-47, with the fixed version being Malware Remover 6.6.8.20251023. The advisory provides only three pieces of tech...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>CVE-2025-11837 深度分析：QNAP Malware Remover Python 代码注入漏洞</title>
+    <link href="/posts/blog_cve_2025_11837_cn/" rel="alternate" type="text/html" title="CVE-2025-11837 深度分析：QNAP Malware Remover Python 代码注入漏洞" />
+    <published>2026-06-22T12:34:00+08:00</published>
+  
+    <updated>2026-06-22T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_cve_2025_11837_cn/</id>
+    <content type="text/html" src="/posts/blog_cve_2025_11837_cn/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>背景
+
+CVE-2025-11837 是一个影响 QNAP Malware Remover 的漏洞，CVSS 9.8，标注为网络可达、无需认证、无需用户交互。该漏洞最早在 Pwn2Own Ireland 2025 上被演示，QNAP 随后在 QSA-25-47 公告中修复，修复版本为 Malware Remover 6.6.8.20251023。公告中的技术信息仅有 CWE-94（代码注入）、影响版本范围、修复版本——没有 PoC，没有根因分析，没有漏洞定位。一个 CVSS 9.8 的未授权 RCE，公开资料中除了公告描述几乎空白。
+
+值得注意的是，这不是 Malware Remover 第一次出现注入问题。2021 年的 QSA-21-16 就是同一个组件的命令注入。同一组件，同类问题，时隔数年再次出现。本次究竟是老问题复发，还是新的注入形式，仅凭公告无法判断，需要进一步分析。
+
+...</summary>
+
+  </entry>
 
   
   <entry>
@@ -110,73 +166,6 @@ In our previous article on CVE-2026-39813, we demonstrated how a path traversal 
 On April 14, 2026, Fortinet published security advisory FG-IR-26-112 disclosing a critical path traversal vulnerability in FortiSandbox — CVE-2026-39813 (CVSS 9.1). The vulnerability affects FortiSandbox 4.4.0–4.4.8 and 5.0.0–5.0.5, and was patched in 4.4.9 and 5.0.6.
 
 This post presents a detailed technical analysis based on firmware reverse engineering, reconstructing the full exp...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2026-39813 深度分析：FortiSandbox JRPC API 路径遍历认证绕过</title>
-    <link href="/posts/blog_cve_2026_39813_cn/" rel="alternate" type="text/html" title="CVE-2026-39813 深度分析：FortiSandbox JRPC API 路径遍历认证绕过" />
-    <published>2026-04-21T12:33:00+08:00</published>
-  
-    <updated>2026-04-21T12:33:00+08:00</updated>
-  
-    <id>/posts/blog_cve_2026_39813_cn/</id>
-    <content type="text/html" src="/posts/blog_cve_2026_39813_cn/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>一个精心构造的 ../../tmp/ 如何绕过认证体系，读取 FortiSandbox 全部系统信息
-
-
-背景
-
-2026 年 4 月 14 日，Fortinet 发布了 FG-IR-26-112 安全公告，披露了 FortiSandbox 产品中一个严重的路径遍历漏洞 CVE-2026-39813（CVSS 9.1）。该漏洞影响 FortiSandbox 4.4.0–4.4.8 和 5.0.0–5.0.5 版本，已在 4.4.9 和 5.0.6 中修复。
-
-本文基于固件逆向分析，从字节码层面还原漏洞的完整利用链。
-
-摘要
-
-
-  漏洞类型： JRPC API 的 is_valid_session() 函数将用户输入的 session 字段直接拼入文件路径 os.path.join(DIRRPCSESS, session_id)，未进行输入验证
-  利用条件： 构造 session:...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2026-31816 Authentication Bypass Vulnerability</title>
-    <link href="/posts/CVE-2026-31816-EN/" rel="alternate" type="text/html" title="CVE-2026-31816 Authentication Bypass Vulnerability" />
-    <published>2026-03-12T12:33:00+08:00</published>
-  
-    <updated>2026-03-12T12:33:00+08:00</updated>
-  
-    <id>/posts/CVE-2026-31816-EN/</id>
-    <content type="text/html" src="/posts/CVE-2026-31816-EN/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>Executive Summary
-
-CVE-2026-31816 is a critical security vulnerability discovered in the Budibase low-code platform, with a CVSS score of 9.8 (Critical). This vulnerability consists of two components:
-
-
-  Authentication Bypass: Due to a regex implementation flaw, attackers can bypass authentication via URL query string manipulation
-  Remote Code Execution (RCE): After bypassing authentication, ...</summary>
 
   </entry>
 
