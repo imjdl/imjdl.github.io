@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2026-07-13T21:18:23+08:00</updated>
+  <updated>2026-07-13T21:21:43+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -38,12 +38,11 @@
     
   
 
-  <summary>Reverse-engineering the vulnerability from the official patch, locating where the filename is concatenated verbatim into the write path, and reproducing the full chain — from triggering to disabling authentication — on a local 10.2 environment.
+  <summary>Background
 
+CVE-2026-9181 is a path traversal vulnerability (CWE-22) in Esri ArcGIS Server. The CVSS v3.1 score is 9.8, network-reachable, with no authentication and no user interaction. The official advisory describes the impact as attackers being able to “overwrite sensitive files” and gain “full administrative access.”
 
-Background
-
-CVE-2026-9181 is a path traversal vulnerability (CWE-22) in Esri ArcGIS Server. The CVSS v3.1 score is 9.8, network-reachable, with no aut...</summary>
+ArcGIS Server is Esri’s GIS (Geographic Information System) server produ...</summary>
 
   </entry>
 
