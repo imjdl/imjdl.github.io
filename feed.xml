@@ -4,7 +4,7 @@
   <id>/</id>
   <title>imjdl blog</title>
   <subtitle>Perpetual student, continual incremental improvement.</subtitle>
-  <updated>2026-07-13T13:46:21+08:00</updated>
+  <updated>2026-07-13T21:13:32+08:00</updated>
   <author>
     <name>Mortyjin</name>
     <uri>/</uri>
@@ -17,6 +17,68 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CVE-2026-9181 Path Traversal in Esri ArcGIS Server</title>
+    <link href="/posts/blog_cve_2026_9181_arcgis_en/" rel="alternate" type="text/html" title="CVE-2026-9181 Path Traversal in Esri ArcGIS Server" />
+    <published>2026-07-13T12:34:00+08:00</published>
+  
+    <updated>2026-07-13T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_cve_2026_9181_arcgis_en/</id>
+    <content type="text/html" src="/posts/blog_cve_2026_9181_arcgis_en/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>Reverse-engineering the vulnerability from the official patch, locating where the filename is concatenated verbatim into the write path, and reproducing the full chain — from triggering to disabling authentication — on a local 10.2 environment.
+
+
+Background
+
+CVE-2026-9181 is a path traversal vulnerability (CWE-22) in Esri ArcGIS Server. The CVSS v3.1 score is 9.8, network-reachable, with no aut...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>CVE-2026-9181：Esri ArcGIS Server 路径遍历漏洞分析</title>
+    <link href="/posts/blog_cve_2026_9181_arcgis_cn/" rel="alternate" type="text/html" title="CVE-2026-9181：Esri ArcGIS Server 路径遍历漏洞分析" />
+    <published>2026-07-13T12:34:00+08:00</published>
+  
+    <updated>2026-07-13T12:34:00+08:00</updated>
+  
+    <id>/posts/blog_cve_2026_9181_arcgis_cn/</id>
+    <content type="text/html" src="/posts/blog_cve_2026_9181_arcgis_cn/" />
+    <author>
+      <name>imjdl</name>
+    </author>
+
+  
+    
+    <category term="vulnerability" />
+    
+  
+
+  <summary>背景
+
+CVE-2026-9181 是 Esri ArcGIS Server 的一个路径遍历漏洞（CWE-22）。CVSS v3.1 评分 9.8，网络可达、无需认证、无需用户交互。官方公告描述的危害是攻击者可”覆盖敏感文件”并获得”完全的管理访问权限”。
+
+ArcGIS Server 是 Esri 的 GIS（地理信息系统）服务端产品，负责发布地图服务、地理处理服务（GP 服务）等，广泛部署在能源、测绘、城市规划、交通等行业的内网和专网中，里面跑的地理数据、工程项目数据多是单位的敏感资产。
+
+本次分析同时基于官方补丁 ArcGIS-120-S-SEC2026U2-Patch 和原版 12.0。用 jadx 反编译补丁 jar 定位新增的校验逻辑，再与原版 12.0 二进制做 diff，确认校验落在漏洞路径上；最后在 10.2 本地环境上实测复现，验证整条利用链。
+
+分析环境如下：
+...</summary>
+
+  </entry>
 
   
   <entry>
@@ -95,65 +157,6 @@ CVE-2026-...</summary>
   <summary>Background
 
 CVE-2025-11837 affects QNAP Malware Remover. It carries a CVSS 9.8 score and is tagged as network-reachable, no authentication required, no user interaction. The vulnerability was first demonstrated at Pwn2Own Ireland 2025 and subsequently fixed by QNAP in advisory QSA-25-47, with the fixed version being Malware Remover 6.6.8.20251023. The advisory provides only three pieces of tech...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CVE-2025-11837 深度分析：QNAP Malware Remover Python 代码注入漏洞</title>
-    <link href="/posts/blog_cve_2025_11837_cn/" rel="alternate" type="text/html" title="CVE-2025-11837 深度分析：QNAP Malware Remover Python 代码注入漏洞" />
-    <published>2026-06-22T12:34:00+08:00</published>
-  
-    <updated>2026-06-22T12:34:00+08:00</updated>
-  
-    <id>/posts/blog_cve_2025_11837_cn/</id>
-    <content type="text/html" src="/posts/blog_cve_2025_11837_cn/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>背景
-
-CVE-2025-11837 是一个影响 QNAP Malware Remover 的漏洞，CVSS 9.8，标注为网络可达、无需认证、无需用户交互。该漏洞最早在 Pwn2Own Ireland 2025 上被演示，QNAP 随后在 QSA-25-47 公告中修复，修复版本为 Malware Remover 6.6.8.20251023。公告中的技术信息仅有 CWE-94（代码注入）、影响版本范围、修复版本——没有 PoC，没有根因分析，没有漏洞定位。一个 CVSS 9.8 的未授权 RCE，公开资料中除了公告描述几乎空白。
-
-值得注意的是，这不是 Malware Remover 第一次出现注入问题。2021 年的 QSA-21-16 就是同一个组件的命令注入。同一组件，同类问题，时隔数年再次出现。本次究竟是老问题复发，还是新的注入形式，仅凭公告无法判断，需要进一步分析。
-
-...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles</title>
-    <link href="/posts/blog_backup_decryption_en/" rel="alternate" type="text/html" title="Hardcoded Encryption Key in FortiSandbox Firmware Decrypting System Backups from First Principles" />
-    <published>2026-06-12T12:34:00+08:00</published>
-  
-    <updated>2026-06-12T12:34:00+08:00</updated>
-  
-    <id>/posts/blog_backup_decryption_en/</id>
-    <content type="text/html" src="/posts/blog_backup_decryption_en/" />
-    <author>
-      <name>imjdl</name>
-    </author>
-
-  
-    
-    <category term="vulnerability" />
-    
-  
-
-  <summary>How firmware reverse engineering revealed a hardcoded AES-256-CBC passphrase shared across all FortiSandbox devices — and why the 4.4.9 patch did nothing to fix it
-
-
-Background
-
-In our previous article on CVE-2026-39813, we demonstrated how a path traversal vulnerability in FortiSandbox’s JRPC API allows unauthenticated access to the backup/config endpoint, yielding a 32KB encrypted file with t...</summary>
 
   </entry>
 
